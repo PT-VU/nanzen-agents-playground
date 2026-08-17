@@ -1,0 +1,248 @@
+week_start,account_id,account_name,department,team_lead,product,tier,licensed_seats,active_users,daily_avg_logins,total_sessions,avg_session_duration_min,features_used,total_features_available,feature_adoption_pct,api_calls_monitored,alerts_configured,alerts_triggered,incidents_detected,p1_incidents,deployments_monitored,avg_deployment_cycle_hours,mttr_hours,custom_dashboards,data_exports,buyer_error_rate_pct,seat_utilization_pct,notes
+2023-11-06,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,8,13.9,80,19.3,12,45,26.7,39423,7,0,0,0,6,92.5,4.3,1,0,0,32.0,
+2023-11-06,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,2,1.1,7,7.5,2,45,4.4,586,0,0,0,0,0,,,0,0,,8.0,campaign_api_monitoring
+2023-11-13,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,9,21.2,71,19.3,13,45,28.9,53226,9,2,2,0,6,101.6,4.4,1,1,0,36.0,
+2023-11-13,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,1,0.9,4,9.7,2,45,4.4,353,0,0,0,0,0,,,0,0,,4.0,campaign_api_monitoring
+2023-11-20,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,11,26.6,97,18.6,12,45,26.7,49143,9,1,1,0,5,99.8,4.5,1,0,0,44.0,
+2023-11-20,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,1,1.3,2,10.6,2,45,4.4,493,0,0,0,0,0,,,0,0,,4.0,campaign_api_monitoring
+2023-11-27,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,12,25.0,149,19.3,13,45,28.9,44246,10,2,0,0,7,104.4,4.5,1,0,0,48.0,
+2023-11-27,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,0,0,0,0,0,45,0,0,0,0,0,0,0,,,0,0,,0.0,no_login_activity
+2023-12-04,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,13,28.0,138,17.8,13,45,28.9,51453,10,1,3,0,5,91.4,3.9,1,0,0,52.0,
+2023-12-04,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,4,3.2,21,4.8,3,45,6.7,1120,1,0,0,0,0,,,0,0,,16.0,campaign_api_monitoring
+2023-12-11,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,15,31.0,173,19.8,15,45,33.3,46014,11,2,0,0,6,92.1,3.8,1,2,0,60.0,
+2023-12-11,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,7,8.9,38,6.3,3,45,6.7,2539,1,0,0,0,0,,,0,0,,28.0,campaign_api_monitoring
+2023-12-18,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,17,36.4,189,19.2,15,45,33.3,57781,11,2,2,0,5,97.9,4.3,1,0,0,68.0,
+2023-12-18,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,6,5.5,20,11.2,3,45,6.7,3383,1,0,0,0,0,,,0,0,,24.0,campaign_api_monitoring
+2023-12-25,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,10,15.1,77,16.9,16,45,35.6,33855,13,2,4,0,7,86.3,4.4,2,1,0,40.0,
+2023-12-25,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,3,2.3,12,,3,45,6.7,945,1,0,0,0,0,,,0,0,,12.0,session_duration_not_recorded
+2024-01-01,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,10,11.8,126,18.2,14,45,31.1,27214,13,4,2,0,6,103.0,4.4,2,0,0,40.0,
+2024-01-01,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,5,3.8,14,14.8,4,45,8.9,1623,1,0,0,0,0,,,3,0,,20.0,campaign_api_monitoring
+2024-01-08,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,20,40.3,241,21.3,16,45,35.6,54771,14,1,0,0,8,90.9,4.2,2,2,0,80.0,
+2024-01-08,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,9.5,20,9.8,4,45,8.9,4352,1,0,0,0,0,,,2,0,,36.0,campaign_api_monitoring
+2024-01-15,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,19,36.3,179,21.6,17,45,37.8,56061,14,2,0,0,8,98.1,4.5,2,0,0,76.0,
+2024-01-15,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,6,4.6,23,7.3,4,45,8.9,4970,1,0,0,0,0,,,3,0,,24.0,campaign_api_monitoring
+2024-01-22,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,19,32.8,227,15.8,17,45,37.8,63476,14,3,0,0,8,99.5,3.5,2,0,0,76.0,
+2024-01-22,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,7,4.8,26,12.9,4,45,8.9,6234,1,0,0,0,0,,,3,0,,28.0,campaign_api_monitoring
+2024-01-29,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,20,47.3,231,17.4,16,45,35.6,58539,15,2,0,0,8,85.9,3.8,2,0,0,80.0,
+2024-01-29,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,10.8,22,8.8,4,45,8.9,6723,1,0,0,0,0,,,2,0,,36.0,campaign_api_monitoring
+2024-02-05,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,20,44.6,178,16.4,18,45,40.0,54938,16,3,1,0,7,88.4,3.7,3,0,0,80.0,
+2024-02-05,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,8,3.0,34,8.4,4,45,8.9,5209,1,0,0,0,0,,,2,0,,32.0,campaign_api_monitoring
+2024-02-12,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,22,43.1,243,21.8,20,45,44.4,57788,16,3,3,0,8,95.8,3.4,3,1,0,88.0,
+2024-02-12,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,8,5.6,26,13.7,4,45,8.9,6548,1,0,0,0,0,,,2,0,,32.0,campaign_api_monitoring
+2024-02-19,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,21,46.3,302,16.2,20,45,44.4,61806,17,4,0,0,6,98.7,3.7,3,0,0,84.0,enterprise_trial
+2024-02-19,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,7,6.1,30,10.2,4,45,8.9,2509,1,0,0,0,0,,,2,0,,28.0,campaign_api_monitoring
+2024-02-26,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,22,41.6,174,16.6,19,45,42.2,73795,17,2,5,0,6,87.1,3.5,3,0,0,88.0,enterprise_trial
+2024-02-26,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,8,7.3,21,10.6,5,45,11.1,3761,1,0,0,0,0,,,2,0,,32.0,campaign_api_monitoring
+2024-03-04,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,21,35.9,224,23.5,19,45,42.2,75421,19,5,2,0,9,88.9,4.0,3,2,0,84.0,enterprise_trial
+2024-03-04,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,8,3.6,15,8.7,4,45,8.9,5398,1,0,0,0,0,,,2,0,,32.0,campaign_api_monitoring
+2024-03-11,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,21,54.5,159,18.2,21,45,46.7,72822,19,2,4,0,6,83.7,3.7,3,0,0,84.0,enterprise_trial
+2024-03-11,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,10,10.2,53,5.5,5,45,11.1,5115,1,0,0,0,0,,,2,0,,40.0,campaign_api_monitoring
+2024-03-18,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,20,48.6,211,18.2,22,45,48.9,79653,20,4,4,0,9,94.7,3.8,3,0,0,80.0,enterprise_trial
+2024-03-18,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,8.0,38,9.3,4,45,8.9,7362,1,0,0,0,0,,,3,0,,36.0,campaign_api_monitoring
+2024-03-25,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,22,49.3,226,22.6,23,45,51.1,68558,21,4,6,0,9,89.9,4.2,3,0,0,88.0,enterprise_trial
+2024-03-25,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,10,5.3,31,9.1,5,45,11.1,3379,1,0,0,0,0,,,2,0,,40.0,campaign_api_monitoring
+2024-04-01,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,22,54.7,181,20.8,23,45,51.1,84233,21,4,3,0,8,99.7,3.5,4,3,0,88.0,enterprise_trial
+2024-04-01,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,7,7.5,26,5.9,6,45,13.3,6140,1,0,0,0,0,,,2,0,,28.0,campaign_api_monitoring
+2024-04-08,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,20,38.3,228,22.5,21,45,46.7,67444,23,5,1,0,7,81.9,4.0,4,0,0,80.0,enterprise_trial
+2024-04-08,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,6.0,35,8.0,5,45,11.1,5034,1,0,0,0,0,,,2,0,,36.0,campaign_api_monitoring
+2024-04-08,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,6.0,35,8.0,5,45,11.1,5034,1,0,0,0,0,,,2,0,,36.0,possible_duplicate
+2024-04-15,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,21,48.7,222,21.1,22,45,48.9,81882,23,6,4,0,9,87.1,3.6,4,0,0,84.0,enterprise_trial
+2024-04-15,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,6,5.9,25,10.2,6,45,13.3,3294,1,0,0,0,0,,,2,0,,24.0,campaign_api_monitoring
+2024-04-22,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,23,52.9,250,20.6,23,45,51.1,84276,24,6,1,1,10,91.3,4.1,4,0,0,92.0,enterprise_trial
+2024-04-22,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,5.6,40,7.1,6,45,13.3,2485,1,0,0,0,0,,,2,0,,36.0,campaign_api_monitoring
+2024-04-29,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,21,46.9,211,24.1,25,45,55.6,71779,24,6,1,0,10,89.1,3.8,4,0,0,84.0,
+2024-04-29,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,7,3.5,16,10.9,5,45,11.1,4151,2,0,0,0,0,,,2,0,,28.0,campaign_api_monitoring
+2024-05-06,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,19,42.4,170,16.9,25,45,55.6,83698,25,6,1,0,7,94.6,4.0,4,1,0,76.0,
+2024-05-06,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,8,7.4,14,7.7,6,45,13.3,4728,1,0,0,0,0,,,2,0,,32.0,campaign_api_monitoring
+2024-05-13,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,22,47.8,216,19.3,25,45,55.6,82382,24,5,2,0,10,82.0,3.2,5,1,0,88.0,
+2024-05-13,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,7,5.1,34,13.3,6,45,13.3,2966,1,0,0,0,0,,,2,0,,28.0,campaign_api_monitoring
+2024-05-20,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,22,58.1,268,16.8,27,45,60.0,94473,25,3,1,0,9,87.1,3.2,5,0,0,88.0,
+2024-05-20,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,7,4.5,32,7.6,5,45,11.1,2158,2,0,0,0,0,,,2,0,,28.0,campaign_api_monitoring
+2024-05-27,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,20,45.4,207,20.0,26,45,57.8,74524,26,3,0,0,10,82.8,3.4,5,3,0,80.0,
+2024-05-27,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,8,3.9,37,10.6,6,45,13.3,1740,2,0,0,0,0,,,2,0,,32.0,campaign_api_monitoring
+2024-06-03,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,21,42.0,200,18.1,26,45,57.8,78608,27,8,5,0,8,82.9,3.6,5,0,0,84.0,
+2024-06-03,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,10,8.9,38,11.8,7,45,15.6,2404,2,0,0,0,0,,,2,0,,40.0,campaign_api_monitoring
+2024-06-10,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,20,51.5,234,20.7,27,45,60.0,98277,29,6,2,0,7,80.9,3.9,5,1,0,80.0,
+2024-06-10,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,10,7.1,28,7.6,7,45,15.6,7132,2,0,0,0,0,,,2,0,,40.0,campaign_api_monitoring
+2024-06-17,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,21,38.7,307,20.2,28,45,62.2,103895,28,6,4,0,10,88.1,3.6,5,0,0,84.0,
+2024-06-17,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,8,9.2,18,6.6,6,45,13.3,6010,2,0,0,0,0,,,2,0,,32.0,campaign_api_monitoring
+2024-06-24,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,22,54.7,194,,28,45,62.2,85946,29,5,2,0,9,93.1,3.3,6,1,0,88.0,session_duration_not_recorded
+2024-06-24,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,12,14.2,26,12.0,7,45,15.6,3572,2,0,0,0,0,,,2,0,,48.0,campaign_api_monitoring
+2024-07-01,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,17,25.8,141,19.1,30,45,66.7,74784,28,10,2,0,11,90.4,3.1,6,0,0,68.0,
+2024-07-01,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,8.9,19,5.7,7,45,15.6,4905,2,0,0,0,0,,,2,0,,36.0,campaign_api_monitoring
+2024-07-08,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,17,29.5,187,17.9,31,45,68.9,68667,30,8,2,0,11,82.4,2.9,6,0,0,68.0,
+2024-07-08,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,8.3,19,9.6,8,45,17.8,3809,2,0,0,0,0,,,2,0,,36.0,campaign_api_monitoring
+2024-07-15,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,16,26.1,203,21.9,28,45,62.2,86186,30,6,1,0,11,90.5,3.8,6,1,0,64.0,
+2024-07-15,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,7.3,38,8.5,6,45,13.3,4061,2,0,0,0,0,,,2,0,,36.0,campaign_api_monitoring
+2024-07-22,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,19,34.0,226,22.8,29,45,64.4,88643,32,9,2,0,11,83.7,3.2,6,3,0,76.0,
+2024-07-22,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,7.1,32,6.6,8,45,17.8,3268,2,0,0,0,0,,,2,0,,36.0,campaign_api_monitoring
+2024-07-29,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,17,33.5,152,24.7,29,45,64.4,78723,31,8,5,0,11,85.8,3.0,6,0,0,68.0,
+2024-07-29,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,7,5.5,26,5.1,9,45,20.0,3661,2,0,0,0,0,,,2,0,,28.0,campaign_api_monitoring
+2024-08-05,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,18,31.1,243,25.4,28,45,62.2,74262,32,4,3,0,11,81.1,3.4,6,0,0,72.0,
+2024-08-05,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,8,5.0,21,11.3,9,45,20.0,9999999,2,0,0,0,0,,,2,0,,32.0,data_pipeline_anomaly_suspected
+2024-08-12,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,18,32.3,214,23.5,30,45,66.7,74023,32,6,0,0,11,89.0,3.6,7,0,0,72.0,
+2024-08-12,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,8,5.6,18,6.9,8,45,17.8,2623,2,0,0,0,0,,,2,0,,32.0,campaign_api_monitoring
+2024-08-19,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,16,32.3,201,20.7,29,45,64.4,85968,36,9,4,0,11,89.1,3.1,6,0,0,64.0,
+2024-08-19,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,6.7,30,12.1,9,45,20.0,3500,2,0,0,0,0,,,2,0,,36.0,campaign_api_monitoring
+2024-08-26,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,17,30.2,178,23.1,30,45,66.7,100149,36,5,3,0,12,82.1,3.4,7,2,0,68.0,
+2024-08-26,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,7,9.1,31,11.2,7,45,15.6,3473,2,0,0,0,0,,,2,0,,28.0,campaign_api_monitoring
+2024-09-02,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,21,41.6,237,25.9,34,45,75.6,115562,34,4,3,0,9,90.9,3.1,7,2,0,84.0,
+2024-09-02,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,5.5,28,6.6,7,45,15.6,5196,2,0,0,0,0,,,2,0,,36.0,campaign_api_monitoring
+2024-09-09,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,23,59.5,276,20.4,34,45,75.6,104348,36,5,0,0,11,77.6,3.3,7,0,0,92.0,
+2024-09-09,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,11,8.2,38,6.6,7,45,15.6,6833,2,0,0,0,0,,,2,0,,44.0,campaign_api_monitoring
+2024-09-16,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,22,49.2,254,24.4,36,45,80.0,124596,36,10,4,0,13,91.1,3.6,7,0,0,88.0,
+2024-09-16,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,10,10.8,50,10.9,9,45,20.0,4217,2,0,0,0,0,,,2,0,,40.0,campaign_api_monitoring
+2024-09-23,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,20,51.8,260,18.8,35,45,77.8,101695,36,5,0,0,13,79.8,3.4,7,1,0,80.0,
+2024-09-23,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,10,7.3,50,6.1,9,45,20.0,3943,2,0,0,0,0,,,2,0,,40.0,campaign_api_monitoring
+2024-09-30,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,22,40.8,306,18.8,34,45,75.6,120735,36,7,3,0,10,83.1,2.8,7,0,0,88.0,
+2024-09-30,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,10,8.0,21,12.7,8,45,17.8,7577,2,0,0,0,0,,,2,0,,40.0,campaign_api_monitoring
+2024-10-07,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,23,41.1,313,27.0,36,45,80.0,112490,41,9,3,0,11,84.9,3.0,7,1,0,92.0,
+2024-10-07,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,8,3.1,32,10.8,8,45,17.8,2968,2,0,0,0,0,,,2,0,,32.0,campaign_api_monitoring
+2024-10-14,MERID-001,Meridian Health,Engineering,David Wu (under Sarah Chen),API Monitoring,growth,25,20,37.2,211,25.0,35,45,77.8,107406,38,9,2,0,10,83.7,3.2,8,0,0,80.0,
+2024-10-14,MERID-001,Meridian Health,Enginering,Lisa Huang,API Monitoring,growth,25,10,5.3,25,14.5,9,45,20.0,4555,3,0,0,0,0,,,2,0,,40.0,dept_name_typo_in_source
+2024-10-21,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,growth,25,21,48.6,258,24.8,38,45,84.4,132873,40,14,0,0,12,88.6,3.4,8,0,0,84.0,
+2024-10-21,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,10,9.6,46,9.4,10,45,22.2,4728,2,0,0,0,0,,,2,0,,40.0,campaign_api_monitoring
+2024-10-28,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,growth,25,22,46.3,269,21.9,37,45,82.2,114582,40,9,0,0,13,88.2,2.9,8,0,0,88.0,
+2024-10-28,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,10,8.3,22,9.4,9,45,20.0,6365,2,0,0,0,0,,,2,0,,40.0,campaign_api_monitoring
+2024-11-04,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,growth,25,21,51.7,215,18.8,39,45,86.7,137270,42,11,2,1,11,79.0,3.1,8,1,0,84.0,
+2024-11-04,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,9,3.7,30,5.9,9,45,20.0,7161,2,0,0,0,0,,,2,0,,36.0,campaign_api_monitoring
+2024-11-11,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,growth,25,21,42.5,274,20.6,39,45,86.7,135351,43,14,0,0,9,72.8,2.7,8,2,0,84.0,
+2024-11-11,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,7,4.7,21,12.0,8,45,17.8,2003,3,0,0,0,0,,,2,0,,28.0,campaign_api_monitoring
+2024-11-18,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,growth,25,21,36.3,218,22.2,40,45,88.9,117763,44,7,4,0,11,85.9,2.8,9,1,0,84.0,
+2024-11-18,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,7,8.3,25,9.2,10,45,22.2,1843,3,0,0,0,0,,,2,0,,28.0,campaign_api_monitoring
+2024-11-25,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,growth,25,20,39.2,171,20.4,38,45,84.4,127548,43,4,0,0,11,76.8,2.8,8,4,0,80.0,
+2024-11-25,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,25,7,4.2,20,5.3,9,45,20.0,2852,2,0,0,0,0,,,1,0,,28.0,campaign_api_monitoring
+2024-12-02,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,47.9,279,21.9,36,62,58.1,140643,46,5,1,0,14,76.5,3.1,9,0,0,92.0,
+2024-12-02,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,10,5.0,38,10.7,11,45,24.4,5167,2,0,0,0,0,,,2,0,,83.3,campaign_api_monitoring
+2024-12-09,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,53.5,213,23.4,34,62,54.8,128669,47,13,3,0,13,72.9,3.1,9,0,0,88.0,
+2024-12-09,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,9,11.4,31,12.3,8,45,17.8,3210,2,0,0,0,0,,,2,0,,75.0,campaign_api_monitoring
+2024-12-16,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,20,36.8,243,27.8,33,62,53.2,122548,45,6,3,0,11,84.0,2.5,9,1,0,80.0,
+2024-12-16,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,9,4.2,39,6.5,8,45,17.8,5115,2,0,0,0,0,,,2,0,,75.0,campaign_api_monitoring
+2024-12-23,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,12,14.3,114,20.8,34,62,54.8,71317,45,14,3,0,11,84.3,3.0,9,1,0,48.0,
+2024-12-23,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,2.3,13,8.7,8,45,17.8,1034,3,0,0,0,0,,,2,0,,41.7,campaign_api_monitoring
+2024-12-30,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,11,11.7,95,20.4,38,62,61.3,83206,47,11,4,0,10,82.6,2.7,9,0,0,44.0,
+2024-12-30,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,6,4.3,15,10.8,11,45,24.4,807,3,0,0,0,0,,,1,0,,50.0,campaign_api_monitoring
+2025-01-06,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,53.3,268,26.9,36,62,58.1,128251,48,10,0,0,10,75.8,2.6,10,0,0,92.0,
+2025-01-06,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,9,6.3,47,7.1,11,45,24.4,8093,3,0,0,0,0,,,2,0,,75.0,campaign_api_monitoring
+2025-01-13,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,30.1,147,27.7,34,62,54.8,88638,47,14,1,1,14,114.7,4.6,10,0,0,88.0,outage_week
+2025-01-13,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,10,5.2,41,9.9,10,45,22.2,4359,2,0,0,0,0,,,2,0,,83.3,campaign_api_monitoring
+2025-01-20,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,44.4,224,28.3,35,62,56.5,143557,47,10,0,0,14,73.4,2.9,10,0,0,84.0,
+2025-01-20,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,9,5.6,19,14.4,10,45,22.2,2082,3,0,0,0,0,,,1,0,,75.0,campaign_api_monitoring
+2025-01-27,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,44.0,193,23.7,38,62,61.3,143986,47,10,0,0,13,75.4,3.1,10,0,0,92.0,
+2025-01-27,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,8,7.0,34,12.4,10,45,22.2,3069,3,0,0,0,0,,,2,0,,66.7,campaign_api_monitoring
+2025-02-03,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,52.3,346,20.8,39,62,62.9,142996,49,14,2,0,12,69.8,2.4,10,1,0,88.0,
+2025-02-03,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,10,4.7,35,7.5,9,45,20.0,6948,3,0,0,0,0,,,2,0,,83.3,campaign_api_monitoring
+2025-02-10,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,20,41.7,219,26.8,39,62,62.9,125421,52,12,4,0,11,70.8,2.9,10,1,0,80.0,
+2025-02-10,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,9,4.4,27,,10,45,22.2,4603,3,0,0,0,0,,,1,0,,75.0,session_duration_not_recorded
+2025-02-17,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,45.1,212,28.8,40,62,64.5,145317,53,14,3,0,11,74.3,2.7,11,0,0,92.0,
+2025-02-17,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,11,10.6,34,10.7,10,45,22.2,1982,3,0,0,0,0,,,1,0,,91.7,campaign_api_monitoring
+2025-02-24,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,40.9,221,23.1,40,62,64.5,160865,54,5,2,0,12,75.8,2.3,11,0,0,92.0,
+2025-02-24,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,9,8.2,37,4.7,11,45,24.4,2263,3,0,0,0,0,,,2,0,,75.0,campaign_api_monitoring
+2025-03-03,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,36.6,273,21.3,36,62,58.1,144489,52,14,0,0,11,70.4,2.8,11,0,0,84.0,
+2025-03-03,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,8,4.5,30,8.8,9,45,20.0,3473,3,0,0,0,0,,,1,0,,66.7,campaign_api_monitoring
+2025-03-10,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,48.6,279,22.4,40,62,64.5,126287,51,16,0,0,13,68.4,2.6,10,2,0,92.0,
+2025-03-10,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,9,4.3,21,9.3,11,45,24.4,2870,3,0,0,0,0,,,1,0,,75.0,campaign_api_monitoring
+2025-03-17,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,59.5,279,25.4,38,62,61.3,167337,54,9,2,0,11,82.3,2.6,11,1,0,92.0,
+2025-03-17,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,8,9.8,20,7.9,11,45,24.4,3751,3,0,0,0,0,,,2,0,,66.7,campaign_api_monitoring
+2025-03-24,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,54.9,226,29.9,41,62,66.1,150015,53,9,0,0,11,80.8,2.3,11,3,0,88.0,
+2025-03-24,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,7,7.1,34,14.6,10,45,22.2,5132,3,0,0,0,0,,,1,0,,58.3,campaign_api_monitoring
+2025-03-31,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,57.1,268,26.0,37,62,59.7,143030,56,8,4,0,17,67.3,2.6,12,0,0,92.0,
+2025-03-31,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,7,6.2,30,9.6,11,45,24.4,4715,3,0,0,0,0,,,1,0,,58.3,campaign_api_monitoring
+2025-04-07,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,53.1,278,24.0,39,62,62.9,134963,56,18,0,0,13,71.3,2.9,11,0,0,84.0,
+2025-04-07,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,9,8.7,21,9.8,9,45,20.0,5966,3,0,0,0,0,,,1,0,,75.0,campaign_api_monitoring
+2025-04-14,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,37.6,264,21.8,38,62,61.3,151395,55,15,0,0,13,67.5,2.7,11,0,0,84.0,
+2025-04-14,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,9,4.3,26,7.7,10,45,22.2,3839,3,0,0,0,0,,,1,0,,75.0,campaign_api_monitoring
+2025-04-21,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,55.9,233,29.1,39,62,62.9,174106,57,7,4,0,15,75.0,2.2,12,0,0,88.0,
+2025-04-21,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,9,8.0,35,10.6,11,45,24.4,5693,3,0,0,0,0,,,1,0,,75.0,campaign_api_monitoring
+2025-04-28,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,56.1,260,24.7,39,62,62.9,141041,58,19,2,0,15,70.7,2.4,12,1,0,88.0,
+2025-04-28,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,7,6.7,17,6.6,12,45,26.7,6104,3,0,0,0,0,,,1,0,,58.3,campaign_api_monitoring
+2025-05-05,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,47.7,269,23.2,40,62,64.5,166095,56,9,5,0,15,67.7,2.3,12,0,0,92.0,
+2025-05-05,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,9,3.3,45,6.8,13,45,28.9,5098,3,0,0,0,0,,,1,0,,75.0,campaign_api_monitoring
+2025-05-12,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,42.0,316,27.6,39,62,62.9,155144,57,16,4,0,14,65.4,2.6,12,0,0,88.0,
+2025-05-12,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,8,5.7,24,9.2,12,45,26.7,3454,3,0,0,0,0,,,1,0,,66.7,campaign_api_monitoring
+2025-05-19,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,53.2,235,26.9,39,62,62.9,143018,57,20,2,0,13,66.9,2.6,13,2,0,88.0,
+2025-05-19,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,8,8.3,36,7.9,10,45,22.2,5142,3,0,0,0,0,,,1,0,,66.7,campaign_api_monitoring
+2025-05-26,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,52.0,175,23.4,43,62,69.4,176435,58,14,0,0,14,75.8,2.2,12,0,0,92.0,
+2025-05-26,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,7,7.9,28,12.1,13,45,28.9,2760,3,0,0,0,0,,,1,0,,58.3,campaign_api_monitoring
+2025-06-02,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,53.8,244,27.4,38,62,61.3,153789,62,9,2,0,16,70.0,2.7,12,0,0,92.0,
+2025-06-02,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,7,2.7,27,11.1,11,45,24.4,4044,3,0,0,0,0,,,1,0,,58.3,campaign_api_monitoring
+2025-06-09,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,49.3,352,24.5,44,62,71.0,159434,60,23,2,0,16,72.3,2.1,13,0,0,92.0,
+2025-06-09,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,7,3.7,29,5.6,11,45,24.4,3053,3,0,0,0,0,,,1,0,,58.3,campaign_api_monitoring
+2025-06-16,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,46.1,228,22.2,39,62,62.9,152745,60,10,0,0,12,70.6,2.1,13,0,0,84.0,
+2025-06-16,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,8,10.2,27,5.8,12,45,26.7,1882,3,0,0,0,0,,,1,0,,66.7,campaign_api_monitoring
+2025-06-23,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,47.7,229,29.0,39,62,62.9,187277,64,8,4,0,17,65.9,2.2,14,0,0,84.0,
+2025-06-23,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,8,8.8,29,8.2,13,45,28.9,2285,3,0,0,0,0,,,1,0,,66.7,campaign_api_monitoring
+2025-06-30,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,60.1,227,22.3,41,62,66.1,147582,62,12,4,0,18,72.4,2.1,13,0,0,92.0,
+2025-06-30,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,7,6.3,32,10.0,12,45,26.7,2346,3,0,0,0,0,,,1,0,,58.3,campaign_api_monitoring
+2025-07-07,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,17,30.8,158,29.7,42,62,67.7,156415,64,8,1,0,12,64.0,2.3,13,0,0,68.0,
+2025-07-07,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,5.5,12,6.6,12,45,26.7,2319,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-07-14,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,18,30.7,144,28.9,44,62,71.0,125697,66,11,3,0,13,68.2,2.5,14,2,0,72.0,
+2025-07-14,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,6,3.0,17,14.6,11,45,24.4,2903,3,0,0,0,0,,,1,0,,50.0,campaign_api_monitoring
+2025-07-21,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,19,40.0,208,31.7,42,62,67.7,127894,65,19,0,0,17,75.1,2.3,13,0,0,76.0,
+2025-07-21,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,6,6.5,22,6.1,11,45,24.4,2469,3,0,0,0,0,,,1,0,,50.0,campaign_api_monitoring
+2025-07-28,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,17,29.7,190,24.5,41,62,66.1,159652,67,12,0,0,18,72.0,2.4,14,0,0,68.0,
+2025-07-28,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,5.5,18,11.6,11,45,24.4,767,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-08-04,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,18,37.8,158,28.8,41,62,66.1,131802,67,12,1,0,15,71.3,1.9,13,0,0,72.0,
+2025-08-04,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,6,5.7,21,9.0,10,45,22.2,1426,3,0,0,0,0,,,1,0,,50.0,campaign_api_monitoring
+2025-08-11,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,18,28.6,227,32.3,46,62,74.2,168561,64,16,3,0,17,65.6,2.4,15,0,0,72.0,
+2025-08-11,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,6.4,17,6.6,12,45,26.7,1300,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-08-18,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,18,27.9,251,30.1,45,62,72.6,168090,70,9,0,0,17,68.8,1.9,14,0,0,72.0,
+2025-08-18,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,2.2,19,11.2,11,45,24.4,2109,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-08-25,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,18,29.7,202,,47,62,75.8,133715,70,25,3,0,17,62.3,1.8,14,2,0,72.0,session_duration_not_recorded
+2025-08-25,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,6,3.9,23,5.4,12,45,26.7,1359,3,0,0,0,0,,,1,0,,50.0,campaign_api_monitoring
+2025-09-01,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,48.3,186,29.0,41,62,66.1,190622,72,12,2,0,15,64.6,2.0,14,0,0,84.0,
+2025-09-01,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,7,6.0,18,11.8,10,45,22.2,2738,3,0,0,0,0,,,1,0,,58.3,campaign_api_monitoring
+2025-09-08,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,24,40.7,195,22.2,45,62,72.6,180208,71,23,4,0,16,63.1,2.2,15,0,0,96.0,
+2025-09-08,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,6,4.3,27,12.1,10,45,22.2,2985,3,0,0,0,0,,,1,0,,50.0,campaign_api_monitoring
+2025-09-15,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,41.0,185,24.2,48,62,77.4,179169,70,12,2,0,19,70.9,1.9,15,0,0,84.0,
+2025-09-15,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,6,6.3,20,12.4,10,45,22.2,4301,3,0,0,0,0,,,1,0,,50.0,campaign_api_monitoring
+2025-09-22,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,46.8,225,30.0,45,62,72.6,187217,69,11,0,0,14,67.8,1.7,15,0,0,88.0,
+2025-09-22,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,6.1,14,11.6,10,45,22.2,1231,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-09-29,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,46.9,231,24.7,44,62,71.0,167580,70,22,1,0,18,59.7,2.1,15,0,0,84.0,
+2025-09-29,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,5.0,26,10.3,10,45,22.2,1143,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-10-06,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,42.4,258,31.9,45,62,72.6,173490,74,22,0,0,18,63.1,1.8,15,1,0,84.0,
+2025-10-06,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,3.3,20,11.2,10,45,22.2,2402,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-10-13,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,40.1,213,30.0,47,62,75.8,173181,77,6,0,0,14,61.5,1.7,15,0,0,84.0,
+2025-10-13,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,6,5.3,26,12.4,10,45,22.2,2047,3,0,0,0,0,,,1,0,,50.0,campaign_api_monitoring
+2025-10-20,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,37.2,215,31.1,45,62,72.6,188157,75,18,0,0,19,70.2,1.8,16,0,0,84.0,
+2025-10-20,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,5.9,13,4.6,10,45,22.2,4306,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-10-27,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,24,50.5,237,23.7,43,62,69.4,203580,78,18,4,1,20,61.3,1.6,16,0,0,96.0,
+2025-10-27,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,5.1,26,12.3,9,45,20.0,3684,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-11-03,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,54.1,188,29.5,46,62,74.2,225908,78,24,3,0,18,58.5,2.0,16,1,0,92.0,
+2025-11-03,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,6.4,18,4.4,10,45,22.2,2065,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-11-10,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,50.4,177,29.1,45,62,72.6,174811,74,11,2,0,20,59.7,1.8,17,1,0,88.0,
+2025-11-10,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,4.4,17,6.3,10,45,22.2,2831,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-11-17,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,24,55.8,287,24.7,49,62,79.0,191423,78,18,2,0,15,59.3,2.0,16,2,0,96.0,
+2025-11-17,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,4,2.2,10,9.0,10,45,22.2,2713,3,0,0,0,0,,,1,0,,33.3,campaign_api_monitoring
+2025-11-24,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,37.1,196,29.0,44,62,71.0,195357,79,8,0,0,16,60.0,1.6,16,0,0,84.0,
+2025-11-24,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,4,4.3,11,13.1,9,45,20.0,2218,3,0,0,0,0,,,1,0,,33.3,campaign_api_monitoring
+2025-12-01,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,50.8,224,25.8,46,62,74.2,172597,80,23,1,0,18,56.7,1.7,16,0,0,88.0,
+2025-12-01,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,3.7,13,10.3,10,45,22.2,1733,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-12-08,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,24,44.3,293,26.0,49,62,79.0,185356,75,8,0,0,20,65.4,1.6,16,0,0,96.0,
+2025-12-08,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,4.3,17,9.8,11,45,24.4,1199,2,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-12-15,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,50.8,186,31.8,48,62,77.4,235766,79,19,1,0,18,59.2,1.8,16,1,0,92.0,
+2025-12-15,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,5,2.9,12,8.5,8,45,17.8,3317,3,0,0,0,0,,,1,0,,41.7,campaign_api_monitoring
+2025-12-22,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,11,14.2,124,25.7,52,62,83.9,123968,82,24,0,0,15,66.8,1.7,17,0,0,44.0,
+2025-12-22,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,2,1.0,7,14.1,10,45,22.2,228,2,0,0,0,0,,,1,0,,16.7,campaign_api_monitoring
+2025-12-29,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,13,17.7,137,26.9,45,62,72.6,130998,83,13,1,0,17,56.6,1.7,16,0,0,52.0,
+2025-12-29,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,2,0.9,6,10.4,8,45,17.8,397,2,0,0,0,0,,,1,0,,16.7,campaign_api_monitoring
+2026-01-05,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,13,13.3,172,27.5,50,62,80.6,126935,79,7,7,0,20,61.6,1.5,17,0,0,52.0,
+2026-01-05,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,2,1.9,4,7.7,10,45,22.2,695,2,0,0,0,0,,,1,0,,16.7,campaign_api_monitoring
+2026-01-12,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,24,58.9,370,28.1,50,62,80.6,232556,80,13,4,0,18,66.5,1.4,16,0,0,96.0,
+2026-01-12,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,4,3.6,17,8.5,11,45,24.4,3238,3,0,0,0,0,,,1,0,,33.3,campaign_api_monitoring
+2026-01-19,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,24,45.1,240,30.0,47,62,75.8,186238,81,17,5,0,20,55.0,1.7,17,2,0,96.0,
+2026-01-19,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,4,3.9,19,14.3,10,45,22.2,1904,3,0,0,0,0,,,1,0,,33.3,campaign_api_monitoring
+2026-01-26,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,46.5,264,25.2,48,62,77.4,213200,85,18,3,0,19,56.6,1.5,18,3,0,92.0,
+2026-01-26,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,4,3.2,12,7.7,8,45,17.8,1728,3,0,0,0,0,,,1,0,,33.3,campaign_api_monitoring
+2026-02-02,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,45.9,209,26.4,51,62,82.3,193365,86,13,2,0,21,56.5,1.6,18,2,0,92.0,
+2026-02-02,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,4,3.3,12,4.7,10,45,22.2,1430,3,0,0,0,0,,,1,0,,33.3,campaign_api_monitoring
+2026-02-09,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,52.0,306,32.0,53,62,85.5,216681,85,9,3,1,22,57.3,1.5,18,0,0,88.0,
+2026-02-09,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,4,3.1,18,4.8,9,45,20.0,3827,3,0,0,0,0,,,1,0,,33.3,campaign_api_monitoring
+2026-02-16,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,24,53.8,268,27.4,51,62,82.3,215804,81,22,1,0,22,64.2,1.5,18,2,0,96.0,
+2026-02-16,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,3,2.7,8,4.7,9,45,20.0,2785,2,0,0,0,0,,,1,0,,25.0,campaign_api_monitoring
+2026-02-23,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,21,36.0,302,31.0,51,62,82.3,226987,82,7,2,0,20,55.2,1.4,18,0,0,84.0,
+2026-02-23,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,4,5.5,17,8.8,8,45,17.8,1447,2,0,0,0,0,,,1,0,,33.3,campaign_api_monitoring
+2026-03-02,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,23,51.9,265,31.5,52,62,83.9,191327,81,20,2,0,16,57.3,1.6,18,0,0,92.0,
+2026-03-02,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,4,3.7,9,13.5,10,45,22.2,2024,2,0,0,0,0,,,1,0,,33.3,campaign_api_monitoring
+2026-03-09,MERID-001,Meridian Health,Engineering,David Wu,API Monitoring,enterprise,25,22,39.6,329,34.5,47,62,75.8,211738,86,20,1,0,16,60.7,1.5,18,0,0,88.0,
+2026-03-09,MERID-001,Meridian Health,Marketing,Lisa Huang,API Monitoring,growth,12,3,2.3,11,7.0,8,45,17.8,1260,3,0,0,0,0,,,0,0,,25.0,campaign_api_monitoring

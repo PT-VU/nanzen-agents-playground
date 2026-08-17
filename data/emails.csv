@@ -1,0 +1,755 @@
+email_id,timestamp,from,to,cc,bcc,subject,body,thread_id,reply_to_id,attachments,importance,read,labels,notes
+EM-0001,2023-09-14 11:30:00,s.chen@meridianhealth.com,elena.rodriguez@athenacloud.com,,,Re: Follow up from our call,"Hi Elena,
+
+Thanks for the call on Tuesday. I've shared the overview deck with my team and there's genuine interest.
+
+Could you send over some case studies from other healthcare-tech companies? We're particularly interested in how you handle HIPAA compliance for the monitoring data.
+
+Also, James Park from our procurement team will need to be involved early - he's pretty thorough with new vendors :)
+
+Best,
+Sarah",THR-001,,,normal,TRUE,"prospect,healthcare",
+EM-0002,2023-09-15 08:45:00,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com,j.park@meridianhealth.com,,RE: Follow up from our call,"Hi Sarah,
+
+Great to hear! I'm attaching two healthcare case studies (Quantum Biotech and HealthFirst). Both went through HIPAA review — happy to walk James through our compliance posture whenever works.
+
+Sending a calendar invite for the demo next Tuesday.
+
+Looking forward to it!
+- Elena",THR-001,EM-0001,healthcare_casestudies_v3.pdf,normal,TRUE,,
+EM-0003,2023-09-22 10:20:00,j.park@meridianhealth.com,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com,,Vendor Assessment - Athena Cloud,"Hi Elena,
+
+Sarah forwarded me the details about Athena Cloud. Before we proceed with a POC, I'll need the following:
+
+1) SOC2 Type II report
+2) HIPAA BAA template
+3) Data processing agreement
+4) Company financial information (last 2 years)
+5) Insurance certificates
+6) References (2 healthcare companies)
+
+Please send these at your earliest convenience. We have a standard 4-week onboarding process for new vendors.
+
+Regards,
+James Park
+Procurement Director",THR-002,,,high,TRUE,,
+EM-0004,2023-09-25 09:00:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,s.chen@meridianhealth.com,,RE: Vendor Assessment - Athena Cloud,"Hi James,
+
+Please find attached all requested documents. Happy to jump on a call if you have any questions about the SOC2 report or BAA.
+
+- Elena",THR-002,EM-0003,SOC2_TypeII_2023.pdf; HIPAA_BAA_template.pdf; DPA_standard.pdf; Athena_financials_2022_2023.pdf; Insurance_cert_2023.pdf; References_healthcare.pdf,normal,TRUE,,
+EM-0005,2023-10-06 14:00:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,,,Updated DPA - Athena Cloud,"Hi James,
+
+Our legal team has amended Section 4.2 as discussed. 90-day retention is confirmed.
+
+Please find the updated DPA attached. Let me know if this clears the remaining items.
+
+Best,
+Elena",THR-003,,DPA_Meridian_v2_amended.pdf,normal,TRUE,,
+EM-0006,2023-10-07 08:15:00,j.park@meridianhealth.com,elena.rodriguez@athenacloud.com,,,RE: Updated DPA - Athena Cloud,"Elena,
+
+Confirmed - the amendment looks good. Legal has signed off. We're clear to proceed with the POC.
+
+James",THR-003,,,normal,TRUE,,
+EM-0007,2023-10-28 09:30:00,j.park@meridianhealth.com,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com,,RE: Athena Cloud Proposal,"Elena,
+
+The proposal has been approved internally. We'd like to proceed with a 12-month contract starting November 1.
+
+A few things:
+1) Can we get the first month prorated since we're starting mid-cycle?
+2) Payment terms: our standard is Net 30.
+3) We need the contract signed by Oct 31 to fit within this quarter's budget.
+
+Please send the final contract.
+
+- James",THR-004,,,normal,TRUE,,
+EM-0008,2023-10-30 10:00:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,s.chen@meridianhealth.com,carlos.vega@athenacloud.com,Athena Cloud Contract - Meridian Health,"Hi James,
+
+Wonderful news! Contract attached with the following terms:
+
+- 12-month term, Nov 1 2023 - Oct 31 2024
+- 25 Engineering seats @ Growth tier
+- 25 Marketing seats
+- Annual value: €180,000
+- Payment terms: Net 30
+- First month prorated as requested
+
+Please route for signature. Looking forward to a great partnership!
+
+- Elena",THR-004,,Contract_MeridianHealth_2023.pdf,high,TRUE,,
+EM-0009,2023-11-22 11:00:00,elena.rodriguez@athenacloud.com,l.huang@meridianhealth.com,s.chen@meridianhealth.com,,Athena Cloud Training for Marketing,"Hi Lisa,
+
+Hope you're well! I wanted to reach out about scheduling a training session for your marketing ops team. We've got some great templates for campaign API monitoring that other marketing teams have found really valuable.
+
+Would next Tuesday or Wednesday work for a 30-min session? Happy to work around your schedule.
+
+Best,
+Elena",THR-005,,,normal,TRUE,,
+EM-0010,2023-11-28 09:15:00,l.huang@meridianhealth.com,elena.rodriguez@athenacloud.com,,,RE: Athena Cloud Training for Marketing,"Hi Elena,
+
+Sorry for the late reply — things have been crazy here. Next Wednesday works. Can we keep it to 20 mins? I've got back to back meetings.
+
+Lisa",THR-005,,,normal,TRUE,,
+EM-0011,2024-02-14 10:00:00,d.wu@meridianhealth.com,elena.rodriguez@athenacloud.com,,,Enterprise tier features,"Hi Elena,
+
+Following up from the QBR — my team really needs the advanced trace and the distributed debugging features. We've been hitting limitations on the Growth tier for our microservices architecture.
+
+Can you send over pricing for an Enterprise upgrade?
+
+Also, is there a way to get a trial of the Enterprise features before committing?
+
+Thanks,
+David",THR-006,,,normal,TRUE,,
+EM-0012,2024-02-16 09:30:00,elena.rodriguez@athenacloud.com,d.wu@meridianhealth.com,s.chen@meridianhealth.com,,RE: Enterprise tier features,"Hi David,
+
+Great to hear the team is pushing the boundaries!
+
+Enterprise tier is €9.80/seat/month for engineering (up from €7.40). That'd be an additional ~€7,200/year for your 25 seats.
+
+I can enable a 30-day trial of Enterprise features on your current plan — no commitment needed. Let me know and I'll switch it on today.
+
+Best,
+Elena",THR-006,,,normal,TRUE,,
+EM-0013,2024-02-16 10:45:00,d.wu@meridianhealth.com,elena.rodriguez@athenacloud.com,,,RE: RE: Enterprise tier features,"Yes please!! Switch it on.
+
+I'll run it past Sarah but I'm sure she'll approve the upgrade at renewal.
+
+- David",THR-006,,,normal,TRUE,,
+EM-0055,2024-04-15 10:00:00,marketing@athenacloud.com,j.park@meridianhealth.com,,,Athena Cloud Product Update — Q2 2024,"Hi there,
+
+Exciting news from Athena Cloud! This quarter we're launching:
+- Advanced distributed tracing (Enterprise tier)
+- Real-time anomaly detection improvements
+- New Slack integration for alerts
+
+Click here to learn more: [link]
+
+Unsubscribe: [link]
+
+Athena Cloud Marketing Team",THR-026,,,normal,TRUE,"marketing,newsletter",
+EM-0056,2024-04-15 10:30:00,j.park@meridianhealth.com,elena.rodriguez@athenacloud.com,,,FW: Athena Cloud Product Update — Q2 2024,"Elena — not sure how I ended up on your marketing list? Can you get me removed? I prefer to hear about updates from you directly.
+
+J",THR-026,,,normal,TRUE,,
+EM-0057,2024-04-15 11:00:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,,,RE: FW: Athena Cloud Product Update — Q2 2024,"Sorry about that James! I've removed you. Won't happen again.
+
+(Though the distributed tracing feature IS pretty cool if David's team is interested 😊)
+
+Elena",THR-026,,,normal,TRUE,,
+EM-0014,2024-07-16 08:00:00,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com,,,Coffee catch-up?,"Hey Sarah,
+
+Hope you're having a good summer! I'm going to be in your area next Tuesday for another meeting — any chance you're free for a quick coffee? Would love to catch up informally.
+
+No agenda, just a chat :)
+
+Elena",THR-007,,,normal,TRUE,,
+EM-0015,2024-07-16 12:30:00,s.chen@meridianhealth.com,elena.rodriguez@athenacloud.com,,,RE: Coffee catch-up?,"Elena!
+
+Tuesday works — let's do 3pm at the café downstairs from our office. I have to warn you, I might be a bit distracted… between us, I've been interviewing for CTO roles at a couple of places. Nothing concrete yet but things are moving.
+
+Also heads up: the board is pushing hard on operational efficiency. Every department is being asked to justify their vendor spend. Engineering is fine — you guys are one of our best vendors. Marketing... I honestly don't know.
+
+See you Tuesday!
+S",THR-007,,,normal,TRUE,confidential,
+EM-0016,2024-07-16 13:00:00,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com,,,RE: RE: Coffee catch-up?,"Amazing about the CTO conversations!! Keep me posted (in confidence of course).
+
+And thanks for the heads up on the vendor review. I'll make sure we're prepared.
+
+See you Tuesday at 3!
+E",THR-007,,,normal,TRUE,,
+EM-0017,2024-08-05 15:00:00,j.park@meridianhealth.com,elena.rodriguez@athenacloud.com,,,Renewal timeline,"Elena,
+
+Wanted to give you a heads up — our new CFO Margaret Walsh has asked procurement to review all vendor contracts over €50K as part of a cost optimization initiative. Your renewal will be part of this review.
+
+I'd suggest having your ROI numbers ready. The review cycle starts in September.
+
+Happy to discuss timing if helpful.
+
+- James",THR-008,,,high,TRUE,"renewal,cfo_review",
+EM-0018,2024-08-08 10:00:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,,,RE: Renewal timeline,"James,
+
+Really appreciate the heads up. I'll have a comprehensive ROI package ready well before September.
+
+Could we schedule a 30-minute call next week to align on what the CFO's review typically looks for? Want to make sure we're presenting in the right format.
+
+Thanks for looking out — really value our working relationship.
+
+- Elena",THR-008,,,normal,TRUE,,
+EM-0019,2024-08-08 14:30:00,j.park@meridianhealth.com,elena.rodriguez@athenacloud.com,,,RE: RE: Renewal timeline,"Elena,
+
+Sure — how about Thursday at 10am? I can walk you through what Margaret typically focuses on. No guarantees of course, but I'd rather our vendors are prepared than caught off guard.
+
+J",THR-008,,,normal,TRUE,,
+EM-0020,2024-09-04 16:30:00,s.chen@meridianhealth.com,elena.rodriguez@athenacloud.com,,,Big news!,"Elena!! Guess what — I've been promoted to CTO! 🎉
+
+Officially starting in the role next Monday. David is being promoted to VP Engineering to take my old role.
+
+I'll still be involved in vendor decisions but at a higher level. Wanted you to hear it from me first.
+
+This doesn't change anything about our plans for Athena Cloud — if anything, as CTO I have more influence to push for the Enterprise upgrade.
+
+Let's catch up next week?
+
+- Sarah",THR-009,,,high,TRUE,,
+EM-0021,2024-09-06 09:00:00,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com,,,RE: Big news!,"Sarah!! Congratulations — so well deserved! 🎉
+
+This is fantastic news. Would love to catch up next week.
+
+Also, since you'll have broader visibility now, I'd love to share some thoughts on how we can make Athena Cloud work even harder across the organization.
+
+Congrats again!
+- Elena",THR-009,,,normal,TRUE,,
+EM-0027,2024-09-13 08:00:00,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com,,,Great catching up yesterday!,"Hi Sarah,
+
+Loved our chat yesterday — so exciting to see you in the CTO seat!
+
+As promised, I'll put together some options on the marketing seat situation. Will have something for you within a couple of weeks.
+
+Talk soon,
+Elena",THR-013,,,normal,TRUE,,
+EM-0022,2024-09-18 14:15:00,d.wu@meridianhealth.com,elena.rodriguez@athenacloud.com,,,Enterprise upgrade status,"Hi Elena,
+
+Now that I'm VP Eng I'm trying to get all our tool upgrades approved before the CFO review. Can you send me the Enterprise tier pricing again? I want to include it in my budget request for Q4.
+
+Sarah said she'd support it but I need to run the numbers.
+
+Also — random question — have you heard of [Competitor X]? One of my team leads mentioned them. Not saying we're looking but I want to be informed.
+
+Thanks,
+David",THR-010,,,normal,TRUE,,
+EM-0023,2024-09-19 08:30:00,elena.rodriguez@athenacloud.com,d.wu@meridianhealth.com,,,RE: Enterprise upgrade status,"Hi David,
+
+Congrats on the promotion!
+
+Enterprise tier for your 25 engineering seats: €9.80/seat/month = total €35,280/year (up from current €22,200 = +€13,080 annually).
+
+Re: [Competitor X] — happy to do a detailed comparison if that would help. We generally see customers who evaluate them come back to us because of our alerting depth and HIPAA compliance, but I'm biased 😊
+
+Let me know if you want me to put together a comparison doc.
+
+Best,
+Elena",THR-010,,,normal,TRUE,"competitor,renewal",
+EM-0024,2024-10-01 09:45:00,j.park@meridianhealth.com,elena.rodriguez@athenacloud.com,,,CFO review update,"Elena,
+
+FYI — the CFO review for your contract is scheduled for the last week of November. Margaret has asked each vendor's procurement lead (that's me for your contract) to present a utilization analysis.
+
+I'll need current usage data from your side. Can you pull a usage report for all Meridian seats?
+
+Also, between us, pricing is going to come up. If there's any flexibility, now would be the time.
+
+- James",THR-011,,,normal,TRUE,"renewal,confidential",
+EM-0025,2024-10-03 11:00:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,,,RE: CFO review update,"Hi James,
+
+Thanks for the heads up — really appreciate it.
+
+I'll have the usage report ready by end of week. Quick question: would it be helpful if I also prepared an ROI analysis showing the business impact? Happy to put together something that makes your presentation easier.
+
+RE: pricing — let me put together some options that I think will work for everyone. I have some ideas.
+
+Talk soon,
+Elena",THR-011,,,normal,TRUE,,
+EM-0026,2024-11-04 11:30:00,l.huang@meridianhealth.com,elena.rodriguez@athenacloud.com,,,Marketing seats,"Hi Elena,
+
+I heard from James that you're looking at restructuring our contract. I just wanted to flag — we actually only use about 12 of the seats actively. The others are allocated to people who left during the restructure or moved to other teams.
+
+I've been meaning to bring this up but honestly wasn't sure who to tell.
+
+Would be great if we could right-size this.
+
+Lisa",THR-012,,,normal,TRUE,"marketing,seats,contract",
+EM-0028,2024-11-12 15:00:00,j.park@meridianhealth.com,elena.rodriguez@athenacloud.com,,,Competitor evaluation,"Elena,
+
+I should let you know — as part of the CFO review, Margaret has asked us to get comparison quotes from two other vendors including [Competitor X]. This is standard for the review process and doesn't mean anything has changed about our preference.
+
+But you should be aware. David's engineering leads have already been asking about [Competitor X]'s debugging features.
+
+I think we can make a strong case for Athena Cloud but I need ammunition — hard ROI numbers and a clear comparison to [Competitor X].
+
+Can we schedule something next week?
+
+Also, between us, pricing will come up. If there's any flexibility, now would be the time.
+
+- James",THR-014,,,high,TRUE,"competitor,renewal,urgent",
+EM-0029,2024-11-13 08:00:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,,,RE: Competitor evaluation,"James,
+
+Thanks for being so upfront — this is really helpful.
+
+Absolutely, let's meet next week. I'll have:
+- Updated ROI analysis with hard numbers
+- Detailed feature comparison vs [Competitor X]
+- Some thoughts on pricing that I think will work well
+
+How's Thursday at 2pm?
+
+Elena",THR-014,,,normal,TRUE,,
+EM-0030,2024-11-20 09:00:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,,,Renewal Proposal - Final Terms,"Hi James,
+
+Following our discussion, here's the restructured proposal:
+
+CURRENT: 25 Eng seats (Growth, €7.40) + 25 Mkt seats (€8.10) = €180K/year
+
+PROPOSED: 25 Eng seats (Enterprise, €9.80) + 12 Mkt seats (€8.10) = €35,280 + €11,664 = WAIT. Let me redo this.
+
+25 x €9.80 x 12 = €35,280 (Engineering)
+12 x €8.10 x 12 = €1,166.40
+
+That's €36,446. That seems too low. I think the original contract was calculated differently.
+
+Let me send a corrected version tomorrow — sorry about this.
+
+- Elena",THR-015,,,normal,TRUE,"renewal,pricing",
+EM-0031,2024-11-21 08:00:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,,,CORRECTED: Renewal Proposal - Meridian Health,"James,
+
+Apologies for yesterday's confusion. Here are the correct numbers:
+
+CURRENT CONTRACT (monthly):
+- 25 Engineering seats @ €7.40/seat = €185/mo per seat...
+
+OK I realize the issue. Our pricing is annual per-seat pricing, not monthly. Let me clarify:
+
+CURRENT: Engineering: 25 seats x €7,400/yr = €185,000??? No that's not right either.
+
+I'm going to have Finance prepare a clean quote and send it over today. Really sorry about the back and forth.
+
+- Elena",THR-015,,,normal,TRUE,"renewal,pricing,error",
+EM-0032,2024-11-22 10:00:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,s.chen@meridianhealth.com; d.wu@meridianhealth.com,sofia.martinez@athenacloud.com,Meridian Health - Clean Renewal Proposal,"Hi James,
+
+Please find attached the formal renewal proposal prepared by our Finance team. I apologize for the confusion in my previous emails — I was working from an outdated pricing sheet.
+
+Clean numbers:
+
+Option A (restructured, no discount):
+Engineering Enterprise 25 seats: €147,000/yr
+Marketing 12 seats: €47,000/yr
+Total: €194,000/yr
+
+Option B (restructured + 5% loyalty discount):
+Total: €184,300/yr
+
+Both options include the Marketing seat reduction (saving you €33K vs paying for unused seats).
+
+The Engineering Enterprise upgrade unlocks the advanced trace and distributed debugging features David's team has been requesting.
+
+I genuinely believe Option B is the right structure — you get more value from Engineering and stop paying for unused Marketing capacity.
+
+Happy to discuss.
+
+- Elena",THR-015,,Renewal_Proposal_Meridian_2024_FINAL.pdf,high,TRUE,,
+EM-0033,2024-12-02 11:00:00,j.park@meridianhealth.com,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com,,RE: Renewal Proposal,"Elena,
+
+Good news — Margaret approved Option B (€184,300/yr with the 5% discount). She specifically noted that she appreciated us proactively reducing the Marketing seats rather than waiting for the review to catch it. That went a long way.
+
+Contract starts Dec 1 for 12 months. Can you send the updated agreement?
+
+One thing: Margaret wants quarterly utilization reports going forward. Non-negotiable.
+
+- James",THR-016,,,normal,TRUE,,
+EM-0034,2024-12-05 09:00:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,s.chen@meridianhealth.com; d.wu@meridianhealth.com,,Renewal Contract - Meridian Health (Year 2),"James,
+
+Wonderful news! Contract attached.
+
+- 12-month term, Dec 1 2024 - Nov 30 2025
+- 25 Engineering seats (Enterprise)
+- 12 Marketing seats
+- ACV: €184,300 (5% loyalty discount)
+- Quarterly utilization reports committed
+- Payment terms: Net 30
+
+Please route for signature. And please pass along my thanks to Margaret — I appreciate the partnership.
+
+Best,
+Elena",THR-016,,Contract_MeridianHealth_Year2.pdf,normal,TRUE,,
+EM-0063,2024-12-23 08:00:00,s.chen@meridianhealth.com,elena.rodriguez@athenacloud.com,,,Out of Office: RE: Happy Holidays!,"Hi,
+
+Thank you for your email. I am out of the office from December 23 to January 3 and will have limited access to email.
+
+For urgent CTO matters, please contact David Wu (d.wu@meridianhealth.com).
+
+Best,
+Sarah Chen
+CTO, Meridian Health",THR-OOO-001,,,normal,TRUE,auto_reply,
+EM-0058,2025-01-01 09:05:00,billing@athenacloud.com,j.park@meridianhealth.com,ap@meridianhealth.com,,Invoice INV-2025-MH-014 — Athena Cloud,"Dear Meridian Health,
+
+Please find attached invoice INV-2025-MH-014 for your Athena Cloud subscription.
+
+Amount: €18,583.58
+Due date: January 31, 2025
+Payment terms: Net 30
+PO Reference: PO-MH-2024-1203
+
+Please remit payment to:
+Athena Cloud BV
+IBAN: NL91 ABNA 0417 1643 00
+BIC: ABNANL2A
+Reference: INV-2025-MH-014
+
+For questions, contact billing@athenacloud.com
+
+Athena Cloud Finance",THR-INV-001,,INV-2025-MH-014.pdf,normal,TRUE,"invoice,auto",
+EM-0036,2025-01-14 09:52:00,d.wu@meridianhealth.com,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com,,RE: Service disruption notification,"Elena,
+
+This is not great. My team has been flying blind for 3+ hours. We had a production deployment scheduled this morning that we've had to postpone.
+
+Can you get me a more specific ETA? And when this is resolved I'm going to need a full post-mortem.
+
+- David",THR-017,,,high,TRUE,,
+EM-0035,2025-01-14 09:55:00,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com,d.wu@meridianhealth.com; j.park@meridianhealth.com,,Service disruption notification,"Sarah,
+
+I want to personally reach out about the platform disruption this morning. Your engineering team's monitoring has been affected since approximately 6:30am.
+
+Root cause: a database migration failure in our infrastructure. Our team is actively working on it and we expect resolution within the next 2 hours.
+
+I know how critical this is for your team and I'm sorry for the disruption. I'll update you as soon as we have resolution.
+
+- Elena",THR-017,,,high,TRUE,,
+EM-0037,2025-01-14 12:15:00,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com; d.wu@meridianhealth.com,j.park@meridianhealth.com,,Service restored - Meridian Health,"Sarah, David —
+
+Service is fully restored as of 12:10pm. Total downtime: approximately 3 hours 20 minutes.
+
+I'm deeply sorry for the disruption. Here's what happened:
+
+- Root cause: A scheduled database migration failed due to an edge case in our migration pipeline
+- Impact: Your engineering team's monitoring was unavailable for ~3.2 hours
+- Immediate fix: Rollback and manual migration applied
+- Permanent fix: We're adding a redundancy layer to the migration pipeline (ETA: end of January)
+
+I'll have a detailed post-mortem document for you by Friday. We'll also be issuing an SLA credit for this incident — I'll work with James on the specifics.
+
+Again, my sincere apologies. This shouldn't have happened.
+
+- Elena",THR-017,,,normal,TRUE,,
+EM-0038,2025-01-17 10:00:00,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com; d.wu@meridianhealth.com; j.park@meridianhealth.com,priya.sharma@athenacloud.com,,Post-Mortem: January 14 Service Disruption,"Team,
+
+As promised, please find attached the detailed post-mortem.
+
+SLA credit: €3,600 applied to your February invoice.
+
+This doesn't make up for the disruption but I want to be transparent about the financial acknowledgment.
+
+Let me know if you have any questions.
+
+- Elena",THR-017,,PostMortem_Jan14_Meridian.pdf,normal,TRUE,,
+EM-0039,2025-01-20 14:30:00,d.wu@meridianhealth.com,elena.rodriguez@athenacloud.com,,,RE: Post-Mortem: January 14 Service Disruption,"Elena,
+
+Thanks for the thorough post-mortem. The remediation steps look solid. My team is satisfied with the response. The SLA credit is appreciated.
+
+Let's move forward.
+
+One thing — can we get added to your early notification list for any future maintenance or migration events? We'd like to schedule around them.
+
+- David",THR-017,,,normal,TRUE,,
+EM-0059,2025-02-01 09:05:00,billing@athenacloud.com,j.park@meridianhealth.com,ap@meridianhealth.com,,Invoice INV-2025-MH-015 — Athena Cloud,"Dear Meridian Health,
+
+Please find attached invoice INV-2025-MH-015 for your Athena Cloud subscription.
+
+Amount: €18,583.58
+Due date: March 03, 2025
+Payment terms: Net 30
+PO Reference: PO-MH-2024-1203
+
+Please remit payment to:
+Athena Cloud BV
+IBAN: NL91 ABNA 0417 1643 00
+BIC: ABNANL2A
+Reference: INV-2025-MH-015
+
+For questions, contact billing@athenacloud.com
+
+Athena Cloud Finance",THR-INV-002,,INV-2025-MH-015.pdf,normal,TRUE,"invoice,auto",
+EM-0040,2025-02-11 08:30:00,m.chen@meridianhealth.com,elena.rodriguez@athenacloud.com,d.wu@meridianhealth.com,,FW: API monitoring issues - /v2/transactions,"Hi Elena,
+
+I'm forwarding this because I'm not getting traction through support. We've had an open ticket (TKT-4891) for the /v2/transactions endpoint since Feb 7. Kevin has been helpful but the issue isn't fully resolved — we're still seeing 3-4% error rates and our procurement team needs this below 1%.
+
+Support marked it as resolved but it isn't. Can you help escalate?
+
+Thanks,
+Maria Chen
+Senior Engineer, Meridian Health
+
+---------- Forwarded message ----------
+From: kevin.liu@athenacloud.com
+Subject: RE: TKT-4891 - API monitoring issues
+""I'm going to close this ticket as we've reduced the error rate significantly...""
+",THR-018,,,high,TRUE,,
+EM-0060,2025-03-01 09:05:00,billing@athenacloud.com,j.park@meridianhealth.com,ap@meridianhealth.com,,Invoice INV-2025-MH-016 — Athena Cloud,"Dear Meridian Health,
+
+Please find attached invoice INV-2025-MH-016 for your Athena Cloud subscription.
+
+Amount: €18,583.58
+Due date: March 31, 2025
+Payment terms: Net 30
+PO Reference: PO-MH-2024-1203
+
+Please remit payment to:
+Athena Cloud BV
+IBAN: NL91 ABNA 0417 1643 00
+BIC: ABNANL2A
+Reference: INV-2025-MH-016
+
+For questions, contact billing@athenacloud.com
+
+Athena Cloud Finance",THR-INV-003,,INV-2025-MH-016.pdf,normal,TRUE,"invoice,auto",
+EM-0061,2025-04-01 09:05:00,billing@athenacloud.com,j.park@meridianhealth.com,ap@meridianhealth.com,,Invoice INV-2025-MH-017 — Athena Cloud,"Dear Meridian Health,
+
+Please find attached invoice INV-2025-MH-017 for your Athena Cloud subscription.
+
+Amount: €18,583.58
+Due date: May 01, 2025
+Payment terms: Net 30
+PO Reference: PO-MH-2024-1203
+
+Please remit payment to:
+Athena Cloud BV
+IBAN: NL91 ABNA 0417 1643 00
+BIC: ABNANL2A
+Reference: INV-2025-MH-017
+
+For questions, contact billing@athenacloud.com
+
+Athena Cloud Finance",THR-INV-004,,INV-2025-MH-017.pdf,normal,TRUE,"invoice,auto",
+EM-0047,2025-04-15 09:00:00,d.wu@meridianhealth.com,priya.sharma@athenacloud.com,,,Quick thank you,"Hey Priya,
+
+Just wanted to say thanks for the architecture session last week. My team couldn't stop talking about it — especially the streaming API patterns you showed. We're already 60% done with the integration.
+
+You're one of the best vendor engineers we work with. Seriously.
+
+David",THR-022,,,normal,TRUE,,
+EM-0048,2025-04-15 11:00:00,priya.sharma@athenacloud.com,d.wu@meridianhealth.com,elena.rodriguez@athenacloud.com,,RE: Quick thank you,"David,
+
+That means a lot — thank you! Your team asked great questions. Looking forward to seeing the integration in production.
+
+Hit me up anytime you need architecture advice. Happy to be a sounding board.
+
+Priya",THR-022,,,normal,TRUE,,
+EM-0062,2025-05-01 09:05:00,billing@athenacloud.com,j.park@meridianhealth.com,ap@meridianhealth.com,,Invoice INV-2025-MH-018 — Athena Cloud,"Dear Meridian Health,
+
+Please find attached invoice INV-2025-MH-018 for your Athena Cloud subscription.
+
+Amount: €18,583.58
+Due date: May 31, 2025
+Payment terms: Net 30
+PO Reference: PO-MH-2024-1203
+
+Please remit payment to:
+Athena Cloud BV
+IBAN: NL91 ABNA 0417 1643 00
+BIC: ABNANL2A
+Reference: INV-2025-MH-018
+
+For questions, contact billing@athenacloud.com
+
+Athena Cloud Finance",THR-INV-005,,INV-2025-MH-018.pdf,normal,TRUE,"invoice,auto",
+EM-0041,2025-05-15 10:30:00,s.chen@meridianhealth.com,elena.rodriguez@athenacloud.com,,,Heads up re: vendor review,"Elena,
+
+Quick heads up — Margaret (CFO) has asked all department heads to present a vendor optimization plan by end of Q2. She's specifically asked about overlap in our developer tooling stack.
+
+I think we can make a strong case for Athena Cloud but I'll need updated ROI numbers. David can help pull the metrics on his end.
+
+I'd also like to discuss the marketing seat situation before this becomes a bigger issue.
+
+Can we find time next week?
+
+- Sarah",THR-019,,,high,TRUE,"renewal,cfo_review,marketing",
+EM-0042,2025-06-02 09:15:00,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com,,,RE: Heads up re: vendor review,"Sarah,
+
+Apologies for the delayed response — no excuse, this should have been my top priority.
+
+I'd love to meet this week to discuss both the ROI update and the marketing seat situation. I have some ideas on the marketing side that I think will work well for the vendor review.
+
+Does Thursday at 2pm work?
+
+- Elena",THR-019,,,normal,TRUE,,
+EM-0043,2025-06-02 11:30:00,s.chen@meridianhealth.com,elena.rodriguez@athenacloud.com,,,RE: RE: Heads up re: vendor review,"Thursday works. See you then.
+
+-S",THR-019,,,normal,TRUE,,
+EM-0044,2025-06-06 08:00:00,elena.rodriguez@athenacloud.com,s.chen@meridianhealth.com,,,Thanks for yesterday + next steps,"Hi Sarah,
+
+Thanks for the direct conversation yesterday. You're right — the marketing seat situation has been hanging too long and I take responsibility for that.
+
+Here's what I'm going to do:
+1. Prepare the ROI one-pager you need for Margaret by next Friday (June 13)
+2. Put together a marketing seat proposal (reduce to 12, matching actual usage)
+3. Model the Engineering Enterprise upgrade as an offset
+
+I'll have all three to you by June 13. You have my word.
+
+Elena",THR-020,,,normal,TRUE,,
+EM-0045,2025-06-06 09:15:00,s.chen@meridianhealth.com,elena.rodriguez@athenacloud.com,,,RE: Thanks for yesterday + next steps,"Elena,
+
+Appreciated. And just to be clear — this isn't personal. You've been a great partner for engineering. But I need ammunition for Margaret, and right now the marketing overspend is a liability that undermines the overall story.
+
+Get me the ROI one-pager and I can sell this internally. Give me the headline number and make it bulletproof. Margaret is a McKinsey person — she'll poke holes in anything fuzzy.
+
+June 13 works. Let's reconvene then.
+
+S",THR-020,,,normal,TRUE,,
+EM-0064,2025-08-04 07:00:00,l.huang@meridianhealth.com,elena.rodriguez@athenacloud.com,,,Automatic reply: Out of Office,"I am currently out of the office and will return on August 18.
+
+For marketing ops issues, please contact my team lead Tom Nguyen (t.nguyen@meridianhealth.com).
+
+Lisa Huang",THR-OOO-002,,,normal,TRUE,auto_reply,
+EM-0046,2025-08-20 14:15:00,l.huang@meridianhealth.com,elena.rodriguez@athenacloud.com,,,Quick billing question,"Hi Elena,
+
+Sorry to bother you — I got a notification from our finance system that we're still being charged for 12 marketing seats. I thought we were going to right-size?
+
+My team is down to about 10 people who actually use it now and even they're not using it every day.
+
+Can you look into this?
+
+Thanks,
+Lisa",THR-021,,,normal,TRUE,"billing,marketing",
+EM-0051,2025-09-25 10:00:00,r.patel@meridianhealth.com,alex.torres@athenacloud.com,,,lol you guys,"alex
+
+just wanted to say the alert scheduling fix was embarrassingly obvious and i'm embarrassed i missed it. your slack response was faster than our internal IT team. don't tell them i said that.
+
+raj",THR-024,,,normal,TRUE,,
+EM-0052,2025-09-25 11:00:00,alex.torres@athenacloud.com,r.patel@meridianhealth.com,,,RE: lol you guys,"haha no worries — happens to the best of us! glad it's sorted.
+
+btw your team's dashboard game is impressive. saw some of the custom layouts David's team built — really creative use of the trace visualization.
+
+alex",THR-024,,,normal,TRUE,,
+EM-0049,2025-10-20 16:30:00,j.park@meridianhealth.com,elena.rodriguez@athenacloud.com,,,no subject,"elena
+
+quick note - margaret just pulled me into a meeting about vendor spend. she's looking at a 10-15% reduction across the board. your contract is on the list.
+
+i'm going to make the case that engineering value is real but i need that ROI doc we've been talking about. like, actually need it this time.
+
+also she asked about the marketing seats again. the utilization numbers aren't great and she knows it.
+
+can we talk this week? it's getting real.
+
+j",THR-023,,,high,TRUE,"urgent,renewal,cfo",
+EM-0050,2025-10-21 07:45:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,,,RE: no subject,"James,
+
+I'm on it. You'll have the ROI doc by end of this week — I promise. And I have a proposal for the marketing seats that I think Margaret will like.
+
+Can we do Thursday morning? 9am?
+
+And thank you, seriously, for keeping me in the loop. You've been an incredible partner through all of this.
+
+Elena",THR-023,,,high,TRUE,,
+EM-0053,2025-10-28 11:00:00,p.morrison@meridianhealth.com,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com; m.walsh@meridianhealth.com,,Vendor Contract Review - Athena Cloud (Ref: VR-2025-047),"Dear Ms. Rodriguez,
+
+I'm writing on behalf of Margaret Walsh, CFO at Meridian Health. As part of our annual vendor optimization review, we are requesting the following for Athena Cloud's contract (CTR-2024-MH-002):
+
+1. Current utilization report (all seat categories)
+2. ROI analysis with quantified business impact
+3. Competitive pricing benchmark
+4. Proposed terms for renewal (December 2025)
+
+Please submit these materials by November 15, 2025.
+
+If you have any questions, please contact James Park (Procurement) who is leading this review for your contract.
+
+Regards,
+Patricia Morrison
+Executive Assistant to the CFO
+Meridian Health",THR-025,,,high,TRUE,"cfo_review,formal,deadline",
+EM-0054,2025-10-28 14:00:00,elena.rodriguez@athenacloud.com,p.morrison@meridianhealth.com,j.park@meridianhealth.com; s.chen@meridianhealth.com,carlos.vega@athenacloud.com,RE: Vendor Contract Review - Athena Cloud (Ref: VR-2025-047),"Dear Ms. Morrison,
+
+Thank you for reaching out. I will have all requested materials submitted well before the November 15 deadline.
+
+I've been working closely with James on the utilization data and ROI analysis, and will coordinate with him on the submission format.
+
+Best regards,
+Elena Rodriguez
+Strategic Account Manager
+Athena Cloud",THR-025,,,high,TRUE,,
+EM-0055,2025-12-16 10:00:00,elena.rodriguez@athenacloud.com,j.park@meridianhealth.com,s.chen@meridianhealth.com,,December 15 service disruption — SLA credit,"James, Sarah,
+
+I want to acknowledge yesterday's service disruption. Our API monitoring platform experienced a 4.5-hour outage between 11:30 and 16:00 that affected all Meridian services.
+
+Per your contract (Section 7.2, 99.9% uptime SLA), you're entitled to a 5% credit on your next monthly invoice. The credit of €929.18 will be applied to your January 2026 invoice automatically.
+
+I also want to let you know that I'll be transitioning your account to a new AM, Tomás Herrera, in early January. I'll make sure the SLA credit and all pending items are properly handed off.
+
+Apologies for the disruption.
+
+Elena",THR-026,,,normal,TRUE,"sla,credit,handoff",
+EM-0056,2025-12-16 14:00:00,j.park@meridianhealth.com,elena.rodriguez@athenacloud.com,,,RE: December 15 service disruption — SLA credit,"Elena,
+
+Acknowledged. Please make sure the credit is applied to the January invoice — I don't want to have to chase this.
+
+Regarding the AM change: I'd appreciate a proper handoff meeting with Tomás before you leave. This account has a lot of context that doesn't fit in a document.
+
+—James",THR-026,,,normal,TRUE,,
+EM-0057,2025-12-26 10:00:00,t.herrera@athenacloud.com,j.park@meridianhealth.com,s.chen@meridianhealth.com; d.wu@meridianhealth.com; l.huang@meridianhealth.com,,"Introduction — Tomás Herrera, your new Account Manager","Dear Meridian team,
+
+My name is Tomás Herrera and I'm taking over as your Account Manager at Athena Cloud, following Elena Rodriguez's transition.
+
+A bit about me: I joined Athena Cloud in September 2025, previously at Salesforce where I managed enterprise accounts in the healthcare and life sciences vertical. I'm familiar with your industry and excited to work with your team.
+
+Elena has shared extensive context about your account and I'm committed to maintaining the service quality you expect. I'd love to schedule individual introductory calls with each of you in the first weeks of January.
+
+Wishing you a great holiday season. Please don't hesitate to reach out with any questions or concerns.
+
+Best regards,
+Tomás Herrera
+Account Manager, Athena Cloud
++31 6 XX XXX XX XX",THR-027,,,normal,TRUE,"introduction,new_am",
+EM-0058,2025-12-26 11:00:00,j.park@meridianhealth.com,t.herrera@athenacloud.com,,,RE: Introduction — Tomás Herrera,"Tomás — welcome. Let's schedule a check-in for mid-January.
+
+—James",THR-027,,,normal,TRUE,,
+EM-0059,2026-01-19 10:30:00,j.park@meridianhealth.com,t.herrera@athenacloud.com,m.walsh@meridianhealth.com,,Invoice INV-2026-MH-026 — missing SLA credit,"Tomás,
+
+I've reviewed the January invoice (INV-2026-MH-026, €18,583.58) and the SLA credit from the December 15 incident has not been applied. Elena confirmed in writing (see her Dec 16 email) that a 5% credit of €929.18 would be applied to this invoice.
+
+The invoice should have been €17,654.40, not €18,583.58.
+
+Can you look into this and confirm how this will be corrected?
+
+I'm CC'ing Margaret as this relates to our vendor payment accuracy tracking.
+
+—James Park
+Procurement Director",THR-028,,,high,TRUE,"billing,dispute,sla_credit",
+EM-0060,2026-01-19 14:00:00,l.huang@meridianhealth.com,j.park@meridianhealth.com,m.walsh@meridianhealth.com,,RE: Invoice INV-2026-MH-026 — missing SLA credit,"James — I noticed the same thing when I was reviewing our vendor costs this morning. The credit Elena promised isn't on the invoice. Also, while I have your attention: we're still paying for 12 marketing seats and only 5 of us are actively using the tool. Can we revisit this with the new AM?
+
+—Lisa",THR-028,,,normal,TRUE,"billing,marketing_seats",
+EM-0061,2026-01-19 16:00:00,m.walsh@meridianhealth.com,j.park@meridianhealth.com,l.huang@meridianhealth.com,,RE: Invoice INV-2026-MH-026 — missing SLA credit,"James — track this to resolution. If a vendor makes a written commitment and fails to deliver, I want it documented. Lisa's point about the marketing seats is noted — add it to the next vendor review.
+
+—MW",THR-028,,,normal,TRUE,cfo_attention,
+EM-0062,2026-01-21 09:00:00,t.herrera@athenacloud.com,j.park@meridianhealth.com,m.walsh@meridianhealth.com; l.huang@meridianhealth.com,,RE: Invoice INV-2026-MH-026 — missing SLA credit,"James,
+
+Thank you for flagging this. I've investigated and you're correct — the SLA credit note (CN-2025-MH-002, €929.18) exists in our system but was not applied to the January invoice during generation. This was an oversight during the account transition.
+
+I take responsibility for not catching this before the invoice was sent.
+
+Proposed resolution:
+- January invoice (INV-2026-MH-026): pay at the issued amount of €18,583.58
+- February invoice (INV-2026-MH-027): SLA credit of €929.18 will be applied, reducing the total to €17,654.40
+
+I've personally verified with our Finance team that the credit will be applied to February. It will not be missed again.
+
+Please confirm this resolution works for your team.
+
+Best,
+Tomás",THR-028,,,normal,TRUE,"resolution,credit_february",
+EM-0063,2026-01-22 08:00:00,j.park@meridianhealth.com,t.herrera@athenacloud.com,m.walsh@meridianhealth.com,,RE: Invoice INV-2026-MH-026 — missing SLA credit,"Tomás,
+
+Accepted. We'll pay January at the issued amount and expect the €929.18 credit on the February invoice.
+
+Also noting: we've restructured our internal cost allocation. Going forward, you'll receive two separate payments per invoice — one from our Engineering budget and one from our Marketing budget. Both will reference the same invoice number.
+
+Please make sure your finance team is aware so the partial payments don't trigger overdue notices.
+
+—James",THR-028,,,normal,TRUE,"accepted,split_payments",
+EM-0064,2026-01-25 09:00:00,j.park@meridianhealth.com,t.herrera@athenacloud.com,,,Reminder: February SLA credit,"Tomás — just a reminder that the SLA credit (€929.18) needs to be on the February invoice. I don't want to be having this conversation again on February 2.
+
+—James",THR-029,,,normal,TRUE,"reminder,credit",
+EM-0065,2026-01-25 10:00:00,t.herrera@athenacloud.com,j.park@meridianhealth.com,,,RE: Reminder: February SLA credit,"James — confirmed. I've set a personal reminder AND asked our Finance team to flag the February invoice for my review before it's sent. You won't need to chase this.
+
+—Tomás",THR-029,,,normal,TRUE,,
+EM-0066,2026-02-01 09:30:00,t.herrera@athenacloud.com,j.park@meridianhealth.com,,,February invoice — SLA credit applied,"James,
+
+Confirming that the February invoice (INV-2026-MH-027) has been issued with the SLA credit applied:
+
+- Standard amount: €18,583.58
+- SLA credit (CN-2025-MH-002): -€929.18
+- Net invoice: €17,654.40
+
+As discussed, you'll find this in your inbox. Please let me know if everything looks correct.
+
+Best,
+Tomás",THR-030,,,normal,TRUE,"credit_applied,confirmed",
+EM-0067,2026-02-01 10:00:00,j.park@meridianhealth.com,t.herrera@athenacloud.com,,,RE: February invoice — SLA credit applied,"Confirmed. Correct.
+
+—J",THR-030,,,normal,TRUE,,

@@ -1,0 +1,18 @@
+account_id,customer_name,industry,segment,country,city,website,employee_count,annual_revenue_eur,primary_contact,account_manager,account_status,notes
+MERID-001,Meridian Health,Healthcare-tech,Enterprise,Netherlands,Amsterdam,meridianhealth.com,320,60200000,Sarah Chen (CTO),Elena Rodriguez,active,Primary POC account. Renewal risk. 2.5yr relationship.
+NEXUS-001,Nexus Fintech,Fintech,Mid-market,Netherlands,Amsterdam,nexusfintech.com,85,12000000,David Liu (VP Payments),Elena Rodriguez,active,Growth engine. 280% ROI. Expansion expected.
+ORBIT-001,Orbita Commerce,E-commerce,Mid-market,Germany,Berlin,orbitacommerce.de,110,18000000,Maria Chen (Procurement),Elena Rodriguez,at_risk,Silent churner. Usage stopped. Unresolved support ticket.
+ATLAS-001,Atlas Logistics EU,Logistics,Enterprise,Netherlands,Rotterdam,atlaslogistics.com,450,95000000,Henrik Larsson (VP Eng),Marcus Webb,active,EU operations. Same parent as ATLAS-002.
+ATLAS-002,Atlas Logistics US,Logistics,Enterprise,United States,Chicago,atlaslogistics.com,600,,Jennifer Walsh (Dir Eng),Marcus Webb,active,US operations. Global consolidation opportunity.
+PINNA-001,Pinnacle Labs,Biotech,Enterprise,United Kingdom,Cambridge,pinnaclelabs.co.uk,280,45000000,Dr. Rachel Foster (Head of R&D),Elena Rodriguez,active,Largest single contract. New CEO risk.
+QUANT-001,Quantum Biotech,Biotech/Healthcare,Enterprise,Switzerland,Basel,quantumbiotech.ch,200,35000000,,Marcus Webb,active,Standard pricing. No discount.
+HLTHF-001,HealthFirst Digital,Healthcare-tech,Mid-market,Germany,Munich,healthfirst.de,150,22000000,,Marcus Webb,active,Meridian peer. 5% multi-year discount.
+TECHG-001,TechGrowth Labs,SaaS,Mid-market,Netherlands,Amsterdam,,40,5000000,,Elena Rodriguez,active,Small account. Standard pricing.
+FINSR-001,FinServe Platform,Fintech,Enterprise,Ireland,Dublin,finserve.io,180,28000000,,Marcus Webb,active,Nexus peer. 7% multi-year discount.
+MEDCO-001,MedConnect,Healthcare-tech,Mid-market,Netherlands,Utrecht,,90,14000000,,Elena Rodriguez,churned,CHURNED Jun 2024. Switched to Grafana.
+DIGIH-001,DigiHealth Solutions,Healthcare-tech,Enterprise,Belgium,Brussels,digihealth.be,170,25000000,,Marcus Webb,active,4% early-payment discount.
+VAULT-001,VaultNet Security,Cybersecurity,Enterprise,Germany,Frankfurt,vaultnet.de,300,40000000,,Marcus Webb,active,Largest new logo 2024. 10% strategic discount (controversial).
+CLOUD-001,CloudPulse Analytics,Data Analytics,Mid-market,Netherlands,Amsterdam,,30,3000000,,Elena Rodriguez,active,Small. Recently onboarded.
+HELIO-001,Helios Energy,Energy Trading,Enterprise,Netherlands,Rotterdam,heliosenergy.nl,120,80000000,Marcus de Vries (VP Trading Technology),Elena Rodriguez,active,Energy trading platform. Series B. Sub-100ms latency requirements.
+VORTX-001,Vortex Payments,Fintech,Mid-market,United Kingdom,London,vortexpayments.co.uk,45,,Oliver Marsh (CEO),Elena Rodriguez,active,Payment processing for mid-market merchants. Datadog replacement.
+CASCD-001,Cascade Dynamics,Supply Chain Tech,Mid-market,Denmark,Copenhagen,cascadedynamics.dk,65,8000000,Erik Lindqvist (CEO),Elena Rodriguez,active,Supply chain optimization platform. 18 Growth seats. CEO-dependent relationship.

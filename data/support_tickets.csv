@@ -1,0 +1,328 @@
+interaction_id,ticket_id,timestamp,interaction_type,direction,author,author_role,channel,content,ticket_status,priority,category,tags,satisfaction_score,sla_breach,time_spent_min,assignee,customer_department,resolution_confirmed,attachment,notes
+INT-1001,TKT-4850,2023-11-06 09:12:00,ticket_created,inbound,David Wu,customer,web_portal,"Hi, we just started our contract and need help setting up the API monitoring for our staging environment. We have a microservices architecture with ~40 services running on Kubernetes. What's the best way to instrument them?",open,medium,onboarding,"setup,kubernetes,staging",,,,Alex Torres,Engineering,,,
+INT-1002,TKT-4850,2023-11-06 09:15:00,auto_reply,outbound,System,system,email,Thank you for contacting Athena Cloud Support. Your ticket TKT-4850 has been created. An engineer will respond within 4 hours.,open,,,,,,,,,,,
+INT-1003,TKT-4850,2023-11-06 10:30:00,reply,outbound,Alex Torres,support_engineer,web_portal,"Hi David! Welcome to Athena Cloud. For a K8s microservices setup, I'd recommend our Helm chart deployment. I've attached our K8s quickstart guide. The key steps are:
+
+1. Install the Athena agent via Helm (chart in the guide)
+2. Configure the service discovery for your 40 services
+3. Set up the initial alert rules (I'd suggest starting with our 'microservices starter pack' template)
+
+Happy to jump on a call if you'd like a walkthrough. We also have a dedicated onboarding engineer who can pair with your team for the first week.",in_progress,,,,,,20,,,,k8s_quickstart_v4.pdf,
+INT-1004,TKT-4850,2023-11-06 14:22:00,reply,inbound,David Wu,customer,web_portal,Thanks Alex! The guide looks great. We got the Helm chart deployed and can see 35 of our 40 services. The remaining 5 are on a legacy sidecar pattern — not standard K8s pods. Any advice on how to instrument those?,,,,,,,,,Engineering,,,
+INT-1005,TKT-4850,2023-11-06 15:10:00,internal_note,internal,Alex Torres,support_engineer,internal,Customer has a hybrid setup. Need to check if our sidecar adapter handles legacy patterns. Escalating to Priya for the edge case.,,,,,,,10,,,,,
+INT-1006,TKT-4850,2023-11-06 16:45:00,reply,outbound,Priya Sharma,senior_engineer,web_portal,"Hi David, Alex looped me in for the legacy sidecar question. We have a custom adapter for exactly this pattern. I'll need to know:
+1. What runtime are the sidecars using? (envoy, nginx, custom?)
+2. Are they reporting metrics via StatsD or Prometheus?
+
+Once I know this I can configure the adapter for you. Usually takes about 30 mins.",in_progress,,,,,,15,Priya Sharma,,,,
+INT-1007,TKT-4850,2023-11-07 08:30:00,reply,inbound,David Wu,customer,web_portal,They're custom Go sidecars reporting via StatsD. Pretty nonstandard — sorry about that 😅,,,,,,,,,Engineering,,,
+INT-1008,TKT-4850,2023-11-07 10:00:00,reply,outbound,Priya Sharma,senior_engineer,web_portal,"No worries, we've seen this before! I've configured the StatsD adapter for your environment. Here's what you need to add to your sidecar config:
+
+[attached: sidecar_adapter_config.yaml]
+
+Deploy this and you should see the remaining 5 services within 10 minutes. Let me know how it goes.",in_progress,,,,,,35,,,,sidecar_adapter_config.yaml,
+INT-1009,TKT-4850,2023-11-07 11:15:00,reply,inbound,David Wu,customer,web_portal,All 40 services visible! You guys are fast. Thanks Priya and Alex — great start to the relationship. 🎉,,,,,,,,,Engineering,,,
+INT-1010,TKT-4850,2023-11-07 11:20:00,status_change,internal,Priya Sharma,senior_engineer,internal,Resolved. All 40 services instrumented including 5 legacy sidecars.,resolved,,,,,,,,,TRUE,,
+INT-1011,TKT-4850,2023-11-08 09:00:00,survey,inbound,David Wu,customer,email,How would you rate your support experience?,,,,,5,,,,,,,
+INT-1012,TKT-4852,2023-11-14 07:30:00,ticket_created,inbound,David Wu,customer,email,Getting a lot of false positive alerts — about 30 per hour from the payment gateway service. It's triggering on normal traffic spikes during checkout. Can we tune the thresholds?,open,medium,configuration,"alerts,false_positives,payment_gateway",,,,Alex Torres,Engineering,,,
+INT-1013,TKT-4852,2023-11-14 08:45:00,reply,outbound,Alex Torres,support_engineer,email,"Hi David, this is common with the default alert thresholds on high-traffic services. Let me pull your traffic pattern for the payment gateway and I'll suggest optimized thresholds.
+
+In the meantime, you can reduce the noise by going to Settings > Alerts > Payment Gateway and changing the sensitivity from 'Aggressive' to 'Balanced'.",in_progress,,,,,,15,,,,,
+INT-1014,TKT-4852,2023-11-14 10:00:00,reply,inbound,David Wu,customer,email,Changed to Balanced — that cut it down to about 5/hour which is manageable. But still some noise during the 2pm checkout spike. Can you look at the pattern?,,,,,,,,,Engineering,,,
+INT-1015,TKT-4852,2023-11-14 14:30:00,reply,outbound,Alex Torres,support_engineer,email,"Analyzed your traffic for the past week. The 2pm spike is consistent — it's your daily batch reconciliation hitting the payment API. I've created a custom alert rule that excludes the 1:45pm-2:15pm window from anomaly detection. This should eliminate the remaining false positives without reducing your coverage.
+
+Config attached — apply it via the CLI: `athena alerts import custom_payment_rule.json`",in_progress,,,,,,30,,,,custom_payment_rule.json,
+INT-1016,TKT-4852,2023-11-14 16:00:00,reply,inbound,David Wu,customer,email,"Applied it. Zero false positives in the last hour. Perfect, thanks Alex.",,,,,,,,,Engineering,,,
+INT-1017,TKT-4852,2023-11-14 16:05:00,status_change,internal,Alex Torres,support_engineer,internal,Resolved. Custom alert rule for payment gateway batch window.,resolved,,,,,,5,,,TRUE,,
+INT-1018,TKT-4852,2023-11-15 10:00:00,survey,inbound,David Wu,customer,email,,,,,,5,,,,,,,
+INT-1019,TKT-4858,2023-12-04 11:30:00,ticket_created,inbound,Lisa Huang,customer,web_portal,"Hi, I attended the training session last week with Elena. I'm trying to set up a dashboard to monitor our campaign API response times but I can't find the template she showed us. Can someone point me to it?",open,low,how_to,"dashboard,marketing,campaign_api",,,,Mike Chen,Marketing,,,
+INT-1020,TKT-4858,2023-12-04 13:15:00,reply,outbound,Mike Chen,support_agent,web_portal,"Hi Lisa! The template Elena showed is in the Dashboard Gallery under 'Marketing Operations > Campaign API Monitoring.' Here's the direct link: [dashboard-gallery/marketing-ops/campaign-api]
+
+Once you open it, click 'Clone to My Dashboards' and it'll be ready to customize. Let me know if you need help with any modifications!",in_progress,,,,,,8,,,,,
+INT-1021,TKT-4858,2023-12-04 14:45:00,reply,inbound,Lisa Huang,customer,web_portal,"Found it, thanks! One more question — can I set up an alert if our ad spend API response time goes above 500ms? We had an issue last month where a rogue API call ran up our costs before anyone noticed.",,,,,,,,,Marketing,,,
+INT-1022,TKT-4858,2023-12-04 15:30:00,reply,outbound,Mike Chen,support_agent,web_portal,"Absolutely — that's exactly what the anomaly detection feature is for. Go to Alerts > New Rule > select your ad spend API endpoint > set threshold to 500ms > set action to 'Notify via Slack.' I'd also recommend enabling the cost anomaly detection — it'll flag any unusual spend patterns automatically.
+
+Here's a 2-minute video walkthrough: [link_to_video_walkthrough]",in_progress,,,,,,12,,,,,
+INT-1023,TKT-4858,2023-12-05 09:20:00,reply,inbound,Lisa Huang,customer,web_portal,Got it working! The cost anomaly detection is clever. Thanks Mike.,,,,,,,,,Marketing,,,
+INT-1024,TKT-4858,2023-12-05 09:25:00,status_change,internal,Mike Chen,support_agent,internal,Resolved. Dashboard setup + anomaly detection configured for marketing.,resolved,,,,,,,,,TRUE,,
+INT-1025,TKT-4858,2023-12-06 11:00:00,survey,inbound,Lisa Huang,customer,email,,,,,,4,,,,,,,
+INT-1026,TKT-4867,2024-01-08 06:45:00,ticket_created,inbound,David Wu,customer,email,URGENT: We're seeing intermittent webhook delivery failures from Athena Cloud to our PagerDuty integration. About 20% of alerts aren't making it through. This is critical — we rely on these for on-call alerting. Started noticing around 2am.,open,high,bug,"webhook,pagerduty,delivery_failure,urgent",,,,Priya Sharma,Engineering,,,
+INT-1027,TKT-4867,2024-01-08 06:48:00,auto_reply,outbound,System,system,email,High priority ticket created. An engineer will respond within 1 hour.,open,,,,,,,,,,,
+INT-1028,TKT-4867,2024-01-08 07:15:00,internal_note,internal,Priya Sharma,senior_engineer,internal,Checking webhook delivery logs. Seeing timeouts on the PagerDuty endpoint. Could be on their side or our retry logic. Pulling connection metrics.,,,,,,,15,,,,,
+INT-1029,TKT-4867,2024-01-08 07:35:00,reply,outbound,Priya Sharma,senior_engineer,email,"Hi David, I'm investigating this now. I can see the delivery failures in our logs — they're timeout-related. Two possibilities:
+1. PagerDuty is experiencing latency on their webhook ingestion endpoint
+2. Our retry logic isn't handling the timeout correctly
+
+I'm checking both angles. In the meantime, can you confirm: are you seeing the same issue with any other webhook destinations (Slack, email)?",in_progress,,,,,,20,,,,,
+INT-1030,TKT-4867,2024-01-08 07:50:00,reply,inbound,David Wu,customer,email,Slack webhooks seem fine. Only PagerDuty is affected. My team is really nervous about this — we have a production deployment scheduled for this afternoon and we need reliable alerting.,,,,,,,,,Engineering,,,
+INT-1031,TKT-4867,2024-01-08 08:30:00,internal_note,internal,Priya Sharma,senior_engineer,internal,"Confirmed: PagerDuty is fine. Our webhook delivery service has a connection pool leak that manifests under sustained load. The pool exhausts after ~6 hours, causing timeouts. Found the bug in webhook_delivery.go line 847. Hotfix in progress.",,,,,,,45,,,,,
+INT-1032,TKT-4867,2024-01-08 09:00:00,reply,outbound,Priya Sharma,senior_engineer,email,"David, found the root cause. It's on our side — a connection pool issue in our webhook delivery service. I'm deploying a hotfix now. ETA: 30 minutes.
+
+In the meantime, I've manually restarted the delivery service which clears the pool. Your webhooks should be flowing again. Can you verify on your end?",in_progress,,,,,,30,,,,,
+INT-1033,TKT-4867,2024-01-08 09:10:00,reply,inbound,David Wu,customer,email,Confirmed — webhooks are coming through again. Thanks for the fast turnaround Priya. Let me know when the permanent fix is live.,,,,,,,,,Engineering,,,
+INT-1034,TKT-4867,2024-01-08 10:15:00,reply,outbound,Priya Sharma,senior_engineer,email,"Hotfix deployed at 10:05am. The connection pool leak is patched. I've also added monitoring on the pool utilization so we'll catch any recurrence before it impacts delivery.
+
+Post-mortem: Connection pool in webhook delivery service had a leak under sustained load (>6 hours continuous delivery). Pool exhausted, causing timeouts. Fix: proper connection cleanup on timeout + pool size monitoring.
+
+Sorry for the disruption. This shouldn't happen again.",resolved,,,,,,60,,,TRUE,,
+INT-1035,TKT-4867,2024-01-08 10:30:00,reply,inbound,David Wu,customer,email,Impressive response time — from report to permanent fix in under 4 hours. We're good for the deployment this afternoon. Thanks Priya.,,,,,,,,,Engineering,,,
+INT-1036,TKT-4867,2024-01-09 09:00:00,survey,inbound,David Wu,customer,email,,,,,,5,,,,,,,
+INT-1037,TKT-4871,2024-02-05 10:00:00,ticket_created,inbound,Lisa Huang,customer,email,"Hi, I have a question about our billing. We're being charged for 25 marketing seats but I don't think we're using all of them. Can someone tell me which seats are active and which aren't? I want to understand what we're paying for.",open,low,billing,"billing,seat_count,marketing",,,,Mike Chen,Marketing,,,
+INT-1038,TKT-4871,2024-02-05 14:20:00,reply,outbound,Mike Chen,support_agent,email,"Hi Lisa, I can pull a seat utilization report for you. Give me until tomorrow and I'll have it ready.
+
+In the meantime, you can see active vs. inactive seats in your admin panel under Settings > Team > Seats. The 'Last Active' column will show when each user last logged in.",in_progress,,,,,,8,,,,,
+INT-1039,TKT-4871,2024-02-06 11:00:00,reply,outbound,Mike Chen,support_agent,email,"Hi Lisa, here's the utilization report for your marketing seats:
+
+- 25 licensed seats
+- 10 active in the last 30 days
+- 8 active in the last 7 days  
+- 15 seats with no activity in 30+ days
+
+The inactive seats are mostly allocated to team members who either haven't completed onboarding or haven't logged in since the initial setup. Would you like me to flag these for your admin to review?
+
+If you'd like to adjust the seat count, that would be a contract change — your account manager Elena can help with that.",in_progress,,,,,,25,,,,seat_utilization_marketing_feb2024.csv,
+INT-1040,TKT-4871,2024-02-07 09:30:00,reply,inbound,Lisa Huang,customer,email,Thanks Mike. 15 inactive seats is more than I expected. I'll talk to Elena about adjusting this. Can you close the ticket for now?,,,,,,,,,Marketing,,,
+INT-1041,TKT-4871,2024-02-07 09:35:00,status_change,internal,Mike Chen,support_agent,internal,Resolved per customer request. Note: customer flagged that 15/25 marketing seats are inactive. This may become a billing/contract issue. Flagged for AM awareness.,resolved,,,,,,,,,TRUE,,potential_billing_issue_flagged
+INT-1042,TKT-4871,2024-02-08 10:00:00,survey,inbound,Lisa Huang,customer,email,,,,,,3,,,,,,,lower_score_reflects_billing_frustration_not_support_quality
+INT-1043,TKT-4876,2024-03-11 14:00:00,ticket_created,inbound,Raj Patel,customer,web_portal,"Hi, I'm on David Wu's engineering team. We're hitting rate limits on the monitoring API during our CI/CD pipeline runs. We run about 200 builds/day and each one calls the Athena API to register a deployment. Is there a way to increase our rate limit?",open,medium,configuration,"rate_limit,ci_cd,api",,,,Alex Torres,Engineering,,,
+INT-1044,TKT-4876,2024-03-11 15:30:00,reply,outbound,Alex Torres,support_engineer,web_portal,"Hi Raj! The default rate limit on the deployment registration API is 100 calls/minute. With 200 builds/day you're probably hitting bursts during peak CI hours.
+
+Two options:
+1. I can increase your rate limit to 300/min (no charge, just a config change on our side)
+2. You can batch your deployment registrations using our bulk API endpoint — this is more efficient and won't hit rate limits
+
+I'd recommend option 2 for long-term scalability. Docs: [link_to_bulk_api_docs]
+
+Want me to do option 1 as a quick fix while you implement option 2?",in_progress,,,,,,15,,,,,
+INT-1045,TKT-4876,2024-03-11 16:15:00,reply,inbound,Raj Patel,customer,web_portal,"Option 1 for now please, we'll work on implementing the bulk API next sprint. Thanks!",,,,,,,,,Engineering,,,
+INT-1046,TKT-4876,2024-03-11 16:30:00,reply,outbound,Alex Torres,support_engineer,web_portal,Done — rate limit increased to 300/min. You should see the change immediately. Let me know if you still hit any issues during peak CI times.,resolved,,,,,,10,,,TRUE,,
+INT-1047,TKT-4876,2024-03-12 09:00:00,survey,inbound,Raj Patel,customer,email,,,,,,5,,,,,,,
+INT-1048,TKT-4880,2024-04-02 08:00:00,ticket_created,inbound,David Wu,customer,web_portal,Our main engineering dashboard is loading really slowly — taking 15-20 seconds. It was fine until last week. We've added about 8 new custom widgets. Is that the issue?,open,medium,performance,"dashboard,slow,performance",,,,Alex Torres,Engineering,,,
+INT-1049,TKT-4880,2024-04-02 09:30:00,reply,outbound,Alex Torres,support_engineer,web_portal,"Hi David, 15-20 second load times are definitely not normal. I'm looking at your dashboard config now. You're right that the new widgets are a factor — specifically, 3 of them are running real-time queries over a 90-day window. That's a lot of data to fetch on each load.
+
+Quick fix: I'll change those 3 widgets from 'real-time' to 'cached (5 min refresh)'. Load time should drop to 2-3 seconds. You won't lose freshness for anything meaningful.
+
+Does that work for you or do you specifically need real-time on those?",in_progress,,,,,,20,,,,,
+INT-1050,TKT-4880,2024-04-02 10:15:00,reply,inbound,David Wu,customer,web_portal,5-min cache is fine for those widgets. Go ahead and make the change. But longer term — will this be an issue as we add more widgets? We're planning to build out department-level dashboards for each service team.,,,,,,,,,Engineering,,,
+INT-1051,TKT-4880,2024-04-02 11:00:00,reply,outbound,Alex Torres,support_engineer,web_portal,"Changed. Load time should be back to normal — let me know.
+
+For the longer term: the Enterprise tier has optimized query execution and dashboard caching that handles large widget counts much better. Given your team's dashboard usage, it might be worth evaluating the Enterprise upgrade. Your AM Elena can walk you through the differences.
+
+For now, my recommendation: keep real-time only for the widgets where you truly need <5 min freshness (usually alerting and on-call dashboards). Everything else can use cached mode without loss of utility.",resolved,,,,,,15,,,TRUE,,
+INT-1052,TKT-4880,2024-04-02 11:30:00,reply,inbound,David Wu,customer,web_portal,"Load time is 2.5 seconds now. Perfect. And yeah, the Enterprise tier is on my list to discuss with Elena for the renewal. Thanks Alex.",,,,,,,,,Engineering,,,
+INT-1053,TKT-4880,2024-04-03 09:00:00,survey,inbound,David Wu,customer,email,,,,,,4,,,,,,,dock_for_initial_issue_not_response_quality
+INT-1054,TKT-4883,2024-05-08 15:00:00,ticket_created,inbound,David Wu,customer,email,"Hi, Sarah asked me to pull our audit logs for an upcoming HIPAA audit. I can see the audit log in the dashboard but can't figure out how to export it in a format our compliance team can use. Is there a CSV or PDF export?",open,medium,how_to,"hipaa,audit_log,export,compliance",,,,Alex Torres,Engineering,,,
+INT-1055,TKT-4883,2024-05-08 16:20:00,reply,outbound,Alex Torres,support_engineer,email,"Hi David, the audit log export is available in the Enterprise tier trial features you're on. Go to:
+
+Admin > Compliance > Audit Log > Export
+
+You'll see options for CSV, JSON, and PDF. For HIPAA audits, I'd recommend the PDF format — it includes the compliance metadata headers that auditors typically look for.
+
+Date range: you can export up to 12 months at a time. Filter by: service, user, event type.
+
+Let me know if the audit team needs anything specific formatted.",resolved,,,,,,10,,,TRUE,,
+INT-1056,TKT-4883,2024-05-09 08:00:00,reply,inbound,David Wu,customer,email,Found it — the PDF export is exactly what we need. Compliance team is happy. Thanks!,,,,,,,,,Engineering,,,
+INT-1057,TKT-4883,2024-05-10 09:00:00,survey,inbound,David Wu,customer,email,,,,,,5,,,,,,,
+INT-1058,TKT-4885,2024-06-12 10:30:00,ticket_created,inbound,Lisa Huang,customer,web_portal,I set up anomaly detection for our ad spend API back in December but I can't find the alert configuration anymore. Did something change? I haven't logged in for a few weeks.,open,low,how_to,"anomaly_detection,marketing,lost_config",,,,Mike Chen,Marketing,,,
+INT-1059,TKT-4885,2024-06-12 14:00:00,reply,outbound,Mike Chen,support_agent,web_portal,"Hi Lisa, your anomaly detection config is still there! The dashboard UI was updated in our March release — the alerts section moved from the left sidebar to the top toolbar under 'Monitoring > Anomaly Rules'.
+
+Your original rule for the ad spend API (>500ms threshold) is still active and has triggered 3 times since you set it up (all resolved automatically). Would you like me to walk you through the new UI?",in_progress,,,,,,12,,,,,
+INT-1060,TKT-4885,2024-06-14 08:15:00,reply,inbound,Lisa Huang,customer,web_portal,"Oh ok, I found it now. Thanks. Didn't realize the UI changed. Could you guys send a heads-up when things move around? It's confusing when you don't log in for a while.",,,,,,,,,Marketing,,,
+INT-1061,TKT-4885,2024-06-14 09:00:00,reply,outbound,Mike Chen,support_agent,web_portal,Fair point — I'll pass that feedback to our product team. We do send release notes via email but I understand they can be easy to miss. Glad you found it! Let me know if you need anything else.,resolved,,,,,,5,,,TRUE,,
+INT-1062,TKT-4887,2024-08-19 11:00:00,ticket_created,inbound,James Park,customer,email,"Hi, our new CFO Margaret Walsh has asked me to verify data retention policies for all our vendor tools. For Athena Cloud, I need to confirm:
+1. How long is monitoring data retained?
+2. How long are audit logs retained?
+3. What happens to data after contract termination?
+4. Is data encrypted at rest and in transit?
+
+This is part of a broader vendor compliance review. Appreciate a prompt response.",open,medium,compliance,"data_retention,cfo_review,compliance,security",,,,Priya Sharma,Procurement,,,
+INT-1063,TKT-4887,2024-08-19 13:00:00,internal_note,internal,Priya Sharma,senior_engineer,internal,CFO-driven compliance review. Need to be thorough on this one. Pulling our compliance documentation.,,,,,,,10,,,,,
+INT-1064,TKT-4887,2024-08-19 14:30:00,reply,outbound,Priya Sharma,senior_engineer,email,"Hi James, thank you for the thorough questions. Here's our response:
+
+1. Monitoring data: Retained for 90 days (per the amended DPA we signed in Oct 2023). Older data is archived for up to 12 months and available on request.
+2. Audit logs: Retained for 24 months (HIPAA requirement).
+3. Post-termination: All customer data is deleted within 30 days of contract end, with a certificate of destruction provided.
+4. Encryption: AES-256 at rest, TLS 1.3 in transit. All data centers are SOC2 Type II certified.
+
+I've attached our updated Security Whitepaper and Data Processing Agreement for Margaret's review. Please let me know if she needs any additional detail.",in_progress,,,,,,40,,,,athena_security_whitepaper_2024.pdf,
+INT-1065,TKT-4887,2024-08-20 09:00:00,reply,inbound,James Park,customer,email,This is exactly what I needed. Clean and comprehensive. I'll pass it to Margaret. Thanks Priya.,,,,,,,,,Procurement,,,
+INT-1066,TKT-4887,2024-08-20 09:05:00,status_change,internal,Priya Sharma,senior_engineer,internal,Resolved. Note: this is part of the CFO's vendor review. May signal increased scrutiny on the contract.,resolved,,,,,,,,,TRUE,,cfo_review_context
+INT-1067,TKT-4887,2024-08-21 10:00:00,survey,inbound,James Park,customer,email,,,,,,5,,,,,,,
+INT-1068,TKT-4889,2024-10-07 13:00:00,ticket_created,inbound,Raj Patel,customer,web_portal,The distributed tracing feature (Enterprise trial) is showing incomplete traces for our microservice call chains. About 30% of traces are missing spans for the payment-processing service. We think it might be related to our custom gRPC implementation. This is blocking our evaluation of the Enterprise tier for the renewal discussion.,open,high,bug,"distributed_tracing,enterprise,grpc,evaluation_blocking",,,,Priya Sharma,Engineering,,,
+INT-1069,TKT-4889,2024-10-07 13:30:00,reply,outbound,Priya Sharma,senior_engineer,web_portal,"Hi Raj, thanks for flagging this. Incomplete traces with gRPC are a known edge case we're actively fixing. The issue is that our trace propagation doesn't handle gRPC streaming correctly — it works for unary calls but drops context on bidirectional streams.
+
+I have a patched version that fixes this. Can I deploy it to your environment? It's not in the GA release yet but it's been tested.",in_progress,,,,,,20,,,,,
+INT-1070,TKT-4889,2024-10-07 14:00:00,reply,inbound,Raj Patel,customer,web_portal,Yes please — David approved. Go ahead and deploy.,,,,,,,,,Engineering,,,
+INT-1071,TKT-4889,2024-10-07 16:30:00,reply,outbound,Priya Sharma,senior_engineer,web_portal,Patch deployed. The trace propagation for gRPC streaming should now be complete. Can you run your test suite and let me know if you're seeing full traces?,in_progress,,,,,,45,,,,,
+INT-1072,TKT-4889,2024-10-08 09:00:00,reply,inbound,Raj Patel,customer,web_portal,"Ran it this morning — all traces complete now. Every span is showing up including the bidirectional gRPC calls. This is great, exactly what we need for the Enterprise evaluation. Thanks Priya!",,,,,,,,,Engineering,,,
+INT-1073,TKT-4889,2024-10-08 09:10:00,status_change,internal,Priya Sharma,senior_engineer,internal,Resolved. gRPC streaming trace propagation patch deployed. Customer confirmed full trace completeness. This unblocks their Enterprise tier evaluation for the renewal.,resolved,,,,,,,,,TRUE,,renewal_context_enterprise_evaluation
+INT-1074,TKT-4889,2024-10-09 09:00:00,survey,inbound,Raj Patel,customer,email,,,,,,5,,,,,,,
+INT-1102,TKT-4895,2024-12-09 10:00:00,ticket_created,inbound,James Park,customer,email,"Hi, the first invoice on our renewed contract (INV-2024-MH-013) shows €15,358. Based on the contract (€184,300/year, December prorated), I expected approximately €15,358.33. The amounts match but the line items don't break down correctly — it shows 25 Engineering seats at the OLD rate (€7.40) instead of the new Enterprise rate (varies). Can someone fix the line item detail?",open,medium,billing,"invoice,line_items,renewal,contract_mismatch",,,,Mike Chen,Procurement,,,
+INT-1103,TKT-4895,2024-12-09 11:30:00,reply,outbound,Mike Chen,support_agent,email,"Hi James, you're right — the total is correct but the line items are pulling from the old contract terms. This is a known issue when contracts are updated mid-billing-cycle. Our billing team will issue a corrected invoice with the proper line item breakdown by end of day.
+
+The amount you owe doesn't change — it's a display issue. Sorry for the confusion on the first invoice of the new contract.",in_progress,,,,,,15,,,,,
+INT-1104,TKT-4895,2024-12-09 16:00:00,reply,outbound,Mike Chen,support_agent,email,"James, corrected invoice attached. Line items now correctly show:
+- 25 Engineering seats (Enterprise tier)
+- 12 Marketing seats
+- 5% loyalty discount applied
+- December proration
+
+Total unchanged: €15,358.33. Please let me know if Margaret needs any further detail for her records.",resolved,,,,,,20,,,TRUE,INV-2024-MH-013-corrected.pdf,
+INT-1105,TKT-4895,2024-12-10 08:00:00,reply,inbound,James Park,customer,email,Looks correct now. Please make sure future invoices have the right breakdown from the start — Margaret scrutinizes every line item. Thanks Mike.,,,,,,,,,Procurement,,,
+INT-1106,TKT-4895,2024-12-11 10:00:00,survey,inbound,James Park,customer,email,,,,,,3,,,,,,,dock_for_incorrect_initial_invoice_not_resolution_speed
+INT-1093,TKT-4893,2025-01-14 06:35:00,ticket_created,inbound,System Alert,system,monitoring,AUTOMATED ALERT: Platform outage detected. Multiple customers affected. Monitoring services unavailable. Triggered by: database migration failure in primary cluster.,open,critical,incident,"p1,outage,platform,database_migration",,,,Incident Commander,All,,,
+INT-1094,TKT-4893,2025-01-14 06:40:00,internal_note,internal,Incident Commander,engineering_lead,internal,"P1 declared. Database migration pipeline failed. Rolling back. ETA for resolution: 2 hours. Affected customers: estimated 45 accounts including Meridian Health, Nexus Fintech, Atlas Logistics.",,,,,,,5,,,,,
+INT-1095,TKT-4893,2025-01-14 07:00:00,reply,outbound,System,system,email,ATHENA CLOUD STATUS UPDATE: We are currently experiencing a service disruption affecting monitoring services. Our team is actively working on resolution. ETA: 2 hours. We will provide updates every 30 minutes. Status page: status.athenacloud.com,in_progress,,,,,,,,,,,
+INT-1096,TKT-4893,2025-01-14 07:30:00,reply,outbound,System,system,email,STATUS UPDATE: Root cause identified — database migration failure. Rollback in progress. Estimated restoration: 11:00am CET.,in_progress,,,,,,,,,,,
+INT-1097,TKT-4893,2025-01-14 08:00:00,reply,inbound,David Wu,customer,email,Elena already reached out — appreciate the proactive communication. My team is waiting. Can you confirm: is any monitoring data being lost during the outage or will it backfill?,,,,,,,,,Engineering,,,
+INT-1098,TKT-4893,2025-01-14 08:15:00,reply,outbound,Priya Sharma,senior_engineer,email,"Hi David, data is being buffered during the outage. Once restored, it will backfill automatically. You won't lose any monitoring data — there may be a 15-20 minute gap in real-time alerting but historical data will be complete.",in_progress,,,,,,10,,,,,
+INT-1099,TKT-4893,2025-01-14 10:10:00,status_change,internal,Incident Commander,engineering_lead,internal,Service restored at 10:10am CET. Total downtime: 3 hours 35 minutes. Data backfill in progress. Initiating customer communications.,resolved,,,,,,,,,,,
+INT-1100,TKT-4893,2025-01-14 10:15:00,reply,outbound,System,system,email,RESOLVED: All Athena Cloud monitoring services have been restored as of 10:10am CET. Data backfill is in progress and will complete within 1 hour. A detailed post-mortem will be published within 72 hours.,resolved,,,,,,,,,,,
+INT-1101,TKT-4893,2025-01-14 12:20:00,reply,inbound,David Wu,customer,email,Confirmed — everything is back up and running on our end. Data backfill completed. Waiting for the post-mortem. — David,,,,,,,,,Engineering,TRUE,,
+INT-1075,TKT-4891,2025-02-07 09:30:00,ticket_created,inbound,Maria Chen,customer,web_portal,"Hi, we're experiencing intermittent failures on the /v2/transactions endpoint monitoring. The API monitoring is returning 504 Gateway Timeout errors about 15% of the time. This started after we updated our infrastructure to Kubernetes 1.29. The monitoring data is critical for our procurement team's daily operations.",open,high,bug,"api,504,timeout,v2_transactions,kubernetes_upgrade",,,,Kevin Liu,Engineering,,,
+INT-1076,TKT-4891,2025-02-07 09:33:00,auto_reply,outbound,System,system,email,High priority ticket created. An engineer will respond within 1 hour.,open,,,,,,,,,,,
+INT-1077,TKT-4891,2025-02-07 10:15:00,internal_note,internal,Kevin Liu,support_agent,internal,"New ticket, P2. Customer reporting 504s on /v2/transactions after K8s upgrade. Need to check if our agent is compatible with K8s 1.29. Checking compatibility matrix.",,,,,,,10,,,,,
+INT-1078,TKT-4891,2025-02-07 10:45:00,reply,outbound,Kevin Liu,support_agent,web_portal,"Hi Maria, thanks for reporting this. The 504 errors after a K8s 1.29 upgrade could be related to a known issue with our agent's health check probe timing. K8s 1.29 changed the default probe behavior.
+
+Can you try updating the agent's readiness probe timeout from 5s to 15s? Here's the config change:
+
+```yaml
+readinessProbe:
+  httpGet:
+    path: /healthz
+    port: 8080
+  timeoutSeconds: 15
+  periodSeconds: 10
+```
+
+Let me know if this reduces the 504 rate.",in_progress,,,,,,25,,,,,
+INT-1079,TKT-4891,2025-02-07 14:00:00,reply,inbound,Maria Chen,customer,web_portal,"Applied the change. The 504 rate dropped from 15% to about 8%. Better, but still not acceptable. We need this below 1% for our procurement operations.",,,,,,,,,Engineering,,,
+INT-1080,TKT-4891,2025-02-07 15:30:00,internal_note,internal,Kevin Liu,support_agent,internal,Partial improvement. The probe fix helped but there's something else going on. Looking at the agent logs more closely. The timeouts might be related to the /v2/transactions endpoint specifically — might be a different issue from the K8s compatibility thing. Going to try the connection pool settings.,,,,,,,20,,,,,
+INT-1081,TKT-4891,2025-02-07 16:00:00,reply,outbound,Kevin Liu,support_agent,web_portal,"Maria, the probe fix helped but didn't fully resolve it. I'm looking at the connection pool settings for the /v2/transactions endpoint. Can you try setting the max connections to 50 (from the default 25)?
+
+Add this to your agent config:
+```yaml
+endpoints:
+  v2_transactions:
+    max_connections: 50
+    timeout: 30s
+```
+
+This should handle the higher connection volume from K8s 1.29's pod networking changes.",in_progress,,,,,,30,,,,,
+INT-1082,TKT-4891,2025-02-08 08:00:00,reply,inbound,Maria Chen,customer,web_portal,Applied the connection pool change overnight. Seeing some improvement — maybe 4-5% error rate now. Still above our 1% threshold. This is really impacting our daily operations. Is there someone more senior who can look at this?,,,,,,,,,Engineering,,,
+INT-1083,TKT-4891,2025-02-08 09:00:00,internal_note,internal,Kevin Liu,support_agent,internal,"Customer requesting escalation. I'm running out of ideas on this one. The standard fixes (probe timing, connection pool) helped partially but didn't solve it. Could be a deeper compatibility issue. Should escalate to Priya but she's out this week at a conference.",,,,,,,10,,,,,escalation_requested_but_priya_unavailable
+INT-1084,TKT-4891,2025-02-08 10:00:00,reply,outbound,Kevin Liu,support_agent,web_portal,"Hi Maria, I understand the urgency. I've been making incremental improvements but I want to fully resolve this. Our senior engineer Priya Sharma is best positioned to diagnose the deeper K8s 1.29 compatibility issue — she'll be back on Monday. In the meantime, I'm continuing to investigate on my side.
+
+Could you send me the output of `athena-agent diagnostics --full` so I can analyze the complete connection behavior?",in_progress,,,,,,15,,,,,
+INT-1085,TKT-4891,2025-02-08 11:30:00,reply,inbound,Maria Chen,customer,web_portal,"Diagnostics output attached. Look, I appreciate the effort Kevin, but we've been going back and forth for two days and we're still at a 4-5% error rate. Our procurement team can't do their jobs properly. They're having to double-check every transaction manually. We need this fixed by Monday.",,,,,,,,,Engineering,,athena_diagnostics_meridian_20250208.txt,
+INT-1086,TKT-4891,2025-02-08 14:00:00,internal_note,internal,Kevin Liu,support_agent,internal,Customer is frustrated. Rightfully so — this has been dragging. Analyzed the diagnostics. I think I see the issue — it's in the DNS resolution caching for the /v2/transactions endpoint. K8s 1.29 changed how CoreDNS handles TTLs and our agent isn't respecting the new TTL values. Going to try a DNS cache flush workaround.,,,,,,,35,,,,,
+INT-1087,TKT-4891,2025-02-08 15:00:00,reply,outbound,Kevin Liu,support_agent,web_portal,"Maria, I think I've found the root cause. It's a DNS resolution issue with K8s 1.29's new CoreDNS behavior. Try this:
+
+1. Add `dnsPolicy: ClusterFirstWithHostNet` to the agent pod spec
+2. Set `ndots: 2` in the DNS config
+3. Restart the agent pods
+
+This should force proper DNS resolution for the /v2 endpoint. I'm fairly confident this is the fix but please monitor for an hour after deploying and let me know the error rate.",in_progress,,,,,,25,,,,,
+INT-1088,TKT-4891,2025-02-09 10:00:00,reply,inbound,Maria Chen,customer,web_portal,"Deployed the DNS changes last night. Monitoring this morning shows maybe 2-3% error rate? Better, but still not below 1%. And honestly I'm not sure if the improvement is real or just lower traffic on a Sunday morning. I'll monitor Monday during peak hours.",,,,,,,,,Engineering,,,
+INT-1089,TKT-4891,2025-02-10 08:30:00,internal_note,internal,Kevin Liu,support_agent,internal,Monday morning. Going to check Maria's metrics during peak. Priya is back today — looping her in if this isn't resolved.,,,,,,,10,,,,,
+INT-1090,TKT-4891,2025-02-10 11:00:00,reply,outbound,Kevin Liu,support_agent,web_portal,"Hi Maria, I've been monitoring your metrics this morning. The error rate during peak (8-11am) was 2.1%. It's better than the original 15% but I know it's not where it needs to be.
+
+I've verified the changes on our end and everything looks correct from the configuration perspective. I believe the remaining errors may be related to a different layer — possibly the K8s ingress controller handling.
+
+I'm going to close this ticket as we've reduced the error rate significantly (15% → 2.1%) and the remaining issue appears to be infrastructure-related on the K8s ingress layer. If the issue persists, please open a new ticket and we can investigate the ingress path specifically.
+
+Thank you for your patience throughout this investigation.",resolved,,,,,,20,,,,,
+INT-1091,TKT-4891,2025-02-10 14:15:00,reply,inbound,Maria Chen,customer,web_portal,"Thanks, but I'm still seeing intermittent failures on the /v2/transactions endpoint. Can you check again? It was at 3.2% during our afternoon batch processing just now. We need this under 1%.",,,,,,,,,Engineering,,,
+INT-1092,TKT-4891,2025-02-14 09:00:00,internal_note,internal,Kevin Liu,support_agent,internal,Noticed Maria's last message from Feb 10 — she said issues persist. Ticket was already marked resolved though. Going to check if she opened a new ticket... don't see one. Should I reopen? It's been 4 days. Let me check with my manager on Monday.,,,,,,,5,,,,,delayed_notice_of_customer_response
+INT-1107,TKT-4898,2025-03-03 09:00:00,ticket_created,inbound,Lisa Huang,customer,email,"Hi, two of my team members (Jen Torres and Sam Lee) are getting 'account disabled' errors when trying to log in. They were transferred from another team as part of our restructure and I thought their accounts would carry over. Can you reactivate them?",open,low,access,"login,disabled_accounts,restructure",,,,Mike Chen,Marketing,,,
+INT-1108,TKT-4898,2025-03-03 13:45:00,reply,outbound,Mike Chen,support_agent,email,"Hi Lisa, I checked and those two accounts were deactivated during the seat reduction in December (they were on the list of seats that were removed when we went from 25 to 12). Since your current contract has 12 marketing seats and 10 are currently active, I can reactivate 2 more — that would bring you to 12/12.
+
+Do you want me to reactivate Jen and Sam's accounts? Just need your confirmation since it'll use your last two available seats.",in_progress,,,,,,12,,,,,
+INT-1109,TKT-4898,2025-03-04 08:30:00,reply,inbound,Lisa Huang,customer,email,Yes please reactivate them. But this means we'll have zero spare seats which isn't great. I might need to deactivate someone else later if the team changes again. Is there a way to swap seats without going through support every time?,,,,,,,,,Marketing,,,
+INT-1110,TKT-4898,2025-03-04 09:15:00,reply,outbound,Mike Chen,support_agent,email,"Jen and Sam's accounts are reactivated. They should be able to log in now.
+
+For seat management: you can do self-service swaps in Admin > Team > Seats. Deactivate one user, activate another. No need to go through support. The only time you'd need us is if you want to change the total seat count (that's a contract change).",resolved,,,,,,10,,,TRUE,,
+INT-1111,TKT-4900,2025-04-14 11:00:00,ticket_created,inbound,Raj Patel,customer,web_portal,Running complex trace queries across our payment processing pipeline is taking 45+ seconds. These are queries spanning 7 days of data across 12 services. Is there a way to optimize this? We're building a weekly reporting dashboard that needs these queries to run in under 10 seconds.,open,medium,performance,"trace_query,performance,reporting",,,,Priya Sharma,Engineering,,,
+INT-1112,TKT-4900,2025-04-14 13:00:00,reply,outbound,Priya Sharma,senior_engineer,web_portal,"Hi Raj, 45 seconds for a 7-day, 12-service trace query is actually within expected range for the current query engine, but I agree it's too slow for a dashboard.
+
+Two approaches:
+1. Pre-aggregated trace summaries: I can enable a feature flag that pre-computes daily trace summaries. Your query would hit the pre-aggregated data instead of raw traces. Expected improvement: 45s → 3-4s.
+2. Query optimization: Add time-based partitioning hints to your queries. Syntax: `PARTITION BY DAY` in the trace query.
+
+I'd recommend option 1 for your reporting use case. Want me to enable it?",in_progress,,,,,,20,,,,,
+INT-1113,TKT-4900,2025-04-14 13:30:00,reply,inbound,Raj Patel,customer,web_portal,Option 1 sounds perfect. Please enable it. Will the pre-aggregation run automatically or do we need to set up a cron job?,,,,,,,,,Engineering,,,
+INT-1114,TKT-4900,2025-04-14 14:00:00,reply,outbound,Priya Sharma,senior_engineer,web_portal,"Enabled. It runs automatically every 6 hours (00:00, 06:00, 12:00, 18:00 UTC). First aggregation will complete within 30 minutes. After that, your dashboard queries should return in 3-4 seconds.
+
+One note: the pre-aggregated data has 6-hour granularity. For real-time trace analysis, you'll still want to use the raw query (which will be the 45-second query). For reporting/dashboards, the pre-aggregated data is the way to go.",resolved,,,,,,15,,,TRUE,,
+INT-1115,TKT-4900,2025-04-14 16:00:00,reply,inbound,Raj Patel,customer,web_portal,Just tested — 3.2 seconds! Exactly what we needed. Thanks Priya.,,,,,,,,,Engineering,,,
+INT-1116,TKT-4900,2025-04-15 09:00:00,survey,inbound,Raj Patel,customer,email,,,,,,5,,,,,,,
+INT-1117,TKT-4903,2025-08-20 10:45:00,ticket_created,inbound,Lisa Huang,customer,email,"Hi, following up on something I've raised before — we're still being billed for 12 marketing seats but my team is down to about 10 people who use the tool, and honestly even they don't use it every day. I want to understand: can we reduce to 8 or 10 seats? Or is this locked into the annual contract? This has been an ongoing frustration. I first raised it with Elena months ago and nothing has changed.",open,low,billing,"billing,seat_reduction,marketing,recurring_issue,escalation_risk",,,,Mike Chen,Marketing,,,
+INT-1118,TKT-4903,2025-08-20 14:00:00,reply,outbound,Mike Chen,support_agent,email,"Hi Lisa, I hear you — let me check what's possible. Seat count changes are contract-level decisions, so I'd need to involve your account manager Elena. Let me flag this with her and one of you will get back to you shortly.
+
+In the meantime, I can pull a fresh utilization report so you have the data for the conversation. I'll send it over tomorrow.",in_progress,,,,,,10,,,,,flagged_for_am_elena
+INT-1119,TKT-4903,2025-08-21 09:00:00,reply,outbound,Mike Chen,support_agent,email,"Lisa, here's the utilization report:
+
+- 12 licensed seats
+- 8 active in the last 30 days
+- 6 active in the last 7 days
+- 4 seats with zero activity in 60+ days
+
+I've flagged this for Elena. Seat changes would take effect at your next contract renewal (December 2025) unless Elena can negotiate an earlier adjustment.",in_progress,,,,,,20,,,,seat_utilization_marketing_aug2025.csv,
+INT-1120,TKT-4903,2025-08-22 08:00:00,reply,inbound,Lisa Huang,customer,email,Thanks Mike. 6 active in 7 days out of 12 seats — that's 50% utilization. And we're paying for all 12. I know this is a contract thing but it's frustrating that I've been raising this since early 2024 and it's still not resolved. Please make sure Elena actually follows up this time.,,,,,,,,,Marketing,,,customer_frustration_escalating
+INT-1121,TKT-4903,2025-08-22 08:30:00,internal_note,internal,Mike Chen,support_agent,internal,Lisa is clearly frustrated and this has been a recurring issue. Sent a direct message to Elena flagging urgency. This needs AM attention before it becomes a renewal risk. Customer explicitly said she raised it before and nothing changed.,,,,,,,5,,,,,am_notification_sent
+INT-1122,TKT-4903,2025-08-25 10:00:00,status_change,internal,Mike Chen,support_agent,internal,Closing as the action item is now with AM Elena for contract discussion. Support has provided utilization data. Following up with Elena in 1 week if no action taken.,resolved,,,,,,,,,,,pending_am_action
+INT-1123,TKT-4905,2025-09-08 14:00:00,ticket_created,inbound,David Wu,customer,web_portal,We're building an internal tool that needs to pull monitoring data via your API and display it in our own dashboards. The current API docs don't cover bulk data export for custom integrations. Is there a bulk API or SDK we can use? Our dev team estimates they need to pull ~500K data points per day.,open,medium,feature_request,"api,bulk_export,custom_integration,sdk",,,,Priya Sharma,Engineering,,,
+INT-1124,TKT-4905,2025-09-08 16:00:00,reply,outbound,Priya Sharma,senior_engineer,web_portal,"Hi David, great to see you building on top of Athena Cloud! For 500K data points/day, I'd recommend our Streaming Export API (Enterprise tier feature). It supports:
+
+- Real-time data streaming via WebSocket
+- Batch exports via REST (up to 1M rows per request)
+- SDK support in Python, Go, and TypeScript
+
+Docs: [link_to_streaming_api]
+Python SDK: `pip install athena-cloud-sdk`
+
+I can set up a 30-minute architecture session with your dev team if helpful. We've had other customers build similar integrations and I can share some patterns.",in_progress,,,,,,20,,,,,
+INT-1125,TKT-4905,2025-09-09 09:00:00,reply,inbound,David Wu,customer,web_portal,The Python SDK is perfect — my team is already checking it out. An architecture session would be great actually. Can we do it next week?,,,,,,,,,Engineering,,,
+INT-1126,TKT-4905,2025-09-09 09:30:00,reply,outbound,Priya Sharma,senior_engineer,web_portal,"Absolutely! I'll send a calendar invite for next Wednesday at 2pm. I'll prepare some reference architectures from similar integrations.
+
+In the meantime, here's a starter notebook that shows the basic patterns for pulling monitoring data via the SDK: [attached]
+
+Looking forward to working with your team on this!",in_progress,,,,,,15,,,,athena_sdk_starter_notebook.ipynb,
+INT-1127,TKT-4905,2025-09-11 14:00:00,meeting_note,internal,Priya Sharma,senior_engineer,internal,Architecture session with David's team (3 engineers). They want to build an internal observability dashboard combining Athena Cloud data with their own business metrics. Clean integration — using the Streaming API + Python SDK. Estimated build time: 2 weeks on their side. I'll be available for questions during their implementation sprint.,,,,,,,35,,,,,architecture_session_completed
+INT-1128,TKT-4905,2025-09-24 10:00:00,reply,inbound,David Wu,customer,web_portal,Integration is live! Pulling 480K data points daily without issues. The Python SDK is solid. Thanks for the architecture session — saved us at least a week of trial and error. Closing this ticket.,,,,,,,,,Engineering,,,
+INT-1129,TKT-4905,2025-09-24 10:10:00,status_change,internal,Priya Sharma,senior_engineer,internal,Resolved. Customer built custom integration using Streaming API + Python SDK. 480K data points/day. This deepens their dependency on Athena Cloud — positive for retention.,resolved,,,,,,,,,TRUE,,deepens_platform_dependency
+INT-1130,TKT-4905,2025-09-25 09:00:00,survey,inbound,David Wu,customer,email,,,,,,5,,,,,,,
+INT-1131,TKT-4907,2025-10-06 11:00:00,ticket_created,inbound,Raj Patel,customer,slack,Quick question — is there a way to set up alerts that only trigger during business hours? We're getting paged at 3am for non-critical stuff,open,low,configuration,"alerts,business_hours,scheduling",,,,Alex Torres,Engineering,,,
+INT-1132,TKT-4907,2025-10-06 11:20:00,reply,outbound,Alex Torres,support_engineer,slack,"Yep! Go to Alerts > Edit Rule > Schedule tab. You can set active hours (e.g., 08:00-20:00 CET, Mon-Fri) for any non-critical alert. P1/P2 alerts will still page 24/7 regardless. Want me to set this up for your team or you good to do it?",in_progress,,,,,,5,,,,,
+INT-1133,TKT-4907,2025-10-06 11:25:00,reply,inbound,Raj Patel,customer,slack,"lol that's so simple, can't believe I missed it. I'll do it myself. thx alex",,,,,,,,,Engineering,,,
+INT-1134,TKT-4907,2025-10-06 11:26:00,status_change,internal,Alex Torres,support_engineer,internal,Resolved. Alert scheduling question.,resolved,,,,,,,,,TRUE,,
+INT-1135,TKT-4909,2025-11-03 09:30:00,ticket_created,inbound,Lisa Huang,customer,email,"Hi Mike, I know this is more of a contract question than a support question, but since Elena hasn't gotten back to me on the seat issue from August, I figured I'd ask here: what's the process for not renewing the marketing seats portion of our contract? My team has been declining and I honestly can't justify the spend to Margaret anymore. The engineering side is a separate conversation — that's David and Sarah's domain. I just want to understand our options for marketing specifically.",open,medium,billing,"non_renewal,marketing,contract,escalation",,,,Mike Chen,Marketing,,,customer_exploring_non_renewal
+INT-1136,TKT-4909,2025-11-03 10:00:00,internal_note,internal,Mike Chen,support_agent,internal,CRITICAL: Lisa is asking about non-renewal for marketing seats. She's frustrated that Elena hasn't followed up from August (TKT-4903). This is a clear escalation signal. Notifying Elena IMMEDIATELY via Slack and marking as urgent for AM attention. Also CC'ing Elena's manager.,,,,,,,5,,,,,critical_escalation_am_notified
+INT-1137,TKT-4909,2025-11-03 10:30:00,reply,outbound,Mike Chen,support_agent,email,"Hi Lisa, I completely understand. Contract changes like this are handled by your account manager, and I've just escalated this directly to Elena as urgent. She or someone from the account team will reach out to you within 24 hours to discuss your options.
+
+For what it's worth, I want to make sure your voice is heard on this — you've been consistent and patient in raising the seat utilization issue, and I appreciate that. I'll personally follow up to make sure Elena connects with you.
+
+Is there anything else I can help with in the meantime?",in_progress,,,,,,15,,,,,
+INT-1138,TKT-4909,2025-11-03 11:00:00,reply,inbound,Lisa Huang,customer,email,Thanks Mike. I appreciate you actually listening. I like Athena Cloud's product — the anomaly detection saved us money that one time. I just can't justify seats nobody uses. Let me know when Elena reaches out.,,,,,,,,,Marketing,,,
+INT-1139,TKT-4909,2025-11-05 09:00:00,internal_note,internal,Mike Chen,support_agent,internal,Two days since escalation. Elena hasn't contacted Lisa yet (checked with Lisa via email). Following up with Elena again. This is the third time this issue has been flagged through support.,,,,,,,5,,,,,am_still_no_response
+INT-1140,TKT-4909,2025-11-07 14:00:00,internal_note,internal,Mike Chen,support_agent,internal,Elena finally contacted Lisa today (4 days after escalation). Elena is setting up a meeting to discuss marketing seat options for the renewal. Keeping ticket open until resolved.,,,,,,,5,,,,,
+INT-1141,TKT-4909,2025-11-14 10:00:00,status_change,internal,Mike Chen,support_agent,internal,"Closing ticket — Elena is handling directly as part of renewal negotiations. Lisa confirmed she's been contacted. But noting for the record: this issue has been raised through support three times (TKT-4871, TKT-4903, TKT-4909) over nearly two years. Each time it was escalated to the AM. The slow follow-through is a relationship risk that goes beyond the seat count itself.",resolved,,,,,,,,,,,recurring_issue_three_times_in_support
+INT-1142,TKT-4915,2025-12-15 11:35:00,ticket_created,inbound,David Wu,customer,web_portal,ALL our monitoring dashboards are showing stale data. No alerts are firing. We noticed because our deployment cycle metric hasn't updated in 30 minutes. This is a PRODUCTION monitoring outage — we're flying blind on our engineering infrastructure. Priority: CRITICAL.,open,critical,incident,"p1,monitoring_outage,stale_data,all_services",,TRUE,,Priya Sharma,Engineering,,,
+INT-1143,TKT-4915,2025-12-15 11:40:00,auto_reply,outbound,System,system,email,Critical priority ticket created. A senior engineer will respond within 15 minutes.,open,,,,,TRUE,,,,,,
+INT-1144,TKT-4915,2025-12-15 11:50:00,reply,outbound,Priya Sharma,senior_engineer,web_portal,"David — we've identified the issue. Our EU-West data ingestion pipeline experienced a cascading failure starting at 11:28. This is affecting all customers in the EU-West region, not just Meridian. Engineering is working on restoration. ETA: 2-3 hours. Your monitoring data will backfill automatically once the pipeline is restored — no data loss, but there will be a gap in real-time alerting until then. I'm deeply sorry for the disruption.",in_progress,,,,,TRUE,10,,,,,
+INT-1145,TKT-4915,2025-12-15 14:00:00,internal_note,internal,Priya Sharma,senior_engineer,internal,Pipeline restoration in progress. Root cause: a storage node failover triggered a cascading retry storm in the ingestion queue. 60% of pipeline capacity restored. Full restoration expected by 16:00.,,,,,,TRUE,120,,,,,
+INT-1146,TKT-4915,2025-12-15 16:05:00,reply,outbound,Priya Sharma,senior_engineer,web_portal,"David — the data ingestion pipeline is fully restored as of 16:02. All monitoring data is flowing again. Historical data for the 11:28-16:02 window is backfilling now (ETA: ~45 minutes for full backfill). I'll send a detailed post-mortem within 48 hours.
+
+Total disruption: 4 hours 34 minutes. Per your SLA terms, this constitutes a breach and you're entitled to a 5% service credit on your next invoice. Your AM Elena will follow up on the credit application.",resolved,,,,,TRUE,15,,,TRUE,,SLA BREACH. 4.5h outage. Customer entitled to 5% credit per contract Section 7.2.
+INT-1147,TKT-4915,2025-12-15 16:30:00,reply,inbound,David Wu,customer,web_portal,"Dashboards are back. Backfill looks complete for engineering. I'll verify the marketing data too but honestly I doubt Lisa's team will even notice. Thanks for the fast comms during the outage, Priya — that made a big difference.",,,,,,TRUE,,,Engineering,,,
+INT-1148,TKT-4915,2025-12-17 10:00:00,reply,outbound,Priya Sharma,senior_engineer,web_portal,"Post-mortem attached. Root cause: storage node failover triggered a cascading retry storm due to a missing circuit breaker in the ingestion queue. Fix deployed: circuit breaker added, retry backoff adjusted from linear to exponential. This specific failure mode cannot recur. Full timeline and preventive measures in the attached document.",,,,,,TRUE,180,,,TRUE,,Post-mortem delivered within 48 hours as promised.
+INT-1149,TKT-4915,2025-12-18 09:00:00,survey,inbound,David Wu,customer,email,Post-mortem was thorough. Communication during the outage was good. The outage itself is obviously not great but shit happens. 4/5 because you handled it well.,,,,,4,TRUE,,,,,,
+INT-1150,TKT-4920,2026-02-03 09:45:00,ticket_created,inbound,Lisa Huang,customer,web_portal,"Hi — I'm following up again on the marketing seat situation. Our contract was supposed to end in November but we're still being invoiced for 12 marketing seats. We have 3 people actually using the product. I raised this in August (TKT-4903) and November (TKT-4909) and was told Elena would handle it during renewal discussions, but nothing has changed. We're now paying for seats we don't use on a contract that should have expired. Can someone please clarify what's happening with our contract status and the marketing seat count?",open,high,billing,"seats,marketing,contract_expired,renewal,overcharge",,,,Alex Torres,Marketing,,,recurring_issue_fourth_time
+INT-1151,TKT-4920,2026-02-03 09:50:00,auto_reply,outbound,System,system,email,Thank you for contacting support. Your ticket TKT-4920 has been created. A team member will respond within 4 hours.,open,,,,,,,,,,,
+INT-1152,TKT-4920,2026-02-03 11:20:00,reply,outbound,Alex Torres,support_agent,web_portal,"Hi Lisa, thanks for reaching out. I can see the history on this and I understand the frustration. You're right that the original contract CTR-2024-MH-002 had an end date of 2025-11-30. It appears billing has continued under auto-renewal terms. I don't have visibility into the renewal negotiation status from support — that sits with the account management team. I'm escalating this to Elena again as urgent, flagging both the contract status question and the seat count. I'll make sure this gets a response within 48 hours.",in_progress,,,,,,,15,,,,,escalated_to_am_fourth_time
+INT-1153,TKT-4920,2026-02-03 11:25:00,internal_note,internal,Alex Torres,support_agent,internal,"This is the FOURTH time marketing seat utilization has come through support (TKT-4871, TKT-4903, TKT-4909, now TKT-4920). Customer is now also questioning contract status — billing is continuing post-expiry with no renewal contract on file. Escalating to Elena and CC'ing her manager. This is a churn risk if not addressed immediately.",,,,,,,5,,,,,critical_escalation_contract_billing_mismatch
+INT-1154,TKT-4920,2026-02-10 14:00:00,internal_note,internal,Alex Torres,support_agent,internal,One week since escalation. No response from AM team. Lisa emailed asking for an update. I have no update to give her. Escalating to support management — this pattern of AM non-response on this account is documented across four tickets now.,,,,,,,5,,,,,am_no_response_one_week
+INT-1155,TKT-4920,2026-02-18 09:30:00,reply,inbound,Lisa Huang,customer,email,"Two weeks, no response from anyone on the account team. I like your product but this is becoming a procurement issue on our side. Our finance team is asking why we're paying for a contract that expired three months ago. I need an answer this week or I'll need to involve our legal team to dispute the post-expiry invoices.",,,,,,,,,Marketing,,,
+INT-1156,TKT-4920,2026-02-18 10:00:00,internal_note,internal,Alex Torres,support_agent,internal,"Customer is now threatening legal/dispute action on post-expiry invoices. This has moved beyond a support issue. Marking as critical. Have directly messaged Elena's manager on Slack.",,,,,,,5,,,,,critical_legal_risk
+INT-1157,TKT-4920,2026-02-19 11:00:00,reply,outbound,Alex Torres,support_agent,email,"Lisa — I've been able to get movement on this. Elena will reach out to you directly by end of day tomorrow (Feb 20) to discuss the contract status and marketing seat adjustment. I sincerely apologize for the delay. I know this has been a long-running issue and the response time has not been acceptable.",in_progress,,,,,,,10,,,,,
+INT-1158,TKT-4920,2026-02-24 09:00:00,status_change,internal,Alex Torres,support_agent,internal,"Elena confirmed she contacted Lisa on Feb 20. Renewal discussion is now active. Closing from support side. For the record: this issue has been raised through support FOUR times over 2+ years. The customer is questioning post-expiry billing and has mentioned legal action. The billing/contract mismatch (invoicing on expired contract with no renewal) is still unresolved as of this note.",resolved,,,,,,,,,,,billing_contract_mismatch_unresolved
