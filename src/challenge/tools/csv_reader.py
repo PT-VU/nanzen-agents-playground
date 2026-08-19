@@ -10,7 +10,7 @@ from __future__ import annotations
 import csv
 from pathlib import Path
 
-from smolagents import Tool
+from challenge.tools.base import Tool
 
 # Root data directory (resolved relative to project root)
 DATA_DIR = Path(__file__).resolve().parents[3] / "data"

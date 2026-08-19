@@ -14,14 +14,30 @@ TASKS: list[dict] = [
         "name": "billing_summary",
         "agent_name": "BillingAnalyst",
         "role": "Billing and payment analysis specialist",
+        "expected_report": "billing_summary_merid001.pdf",
+        "max_steps": 30,
         "prompt": (
             "Analyze the billing history for account MERID-001 (Meridian Health).\n"
-            "1. Read the billing data and summarize total invoiced vs total paid.\n"
-            "2. Identify any late payments or outstanding invoices.\n"
-            "3. Create a PDF report called 'billing_summary_merid001.pdf' with:\n"
+            "1. Use the deterministic billing tools to inspect the full billing range, "
+            "list invoice cases, and read invoice case details.\n"
+            "2. Use build_invoice_case_documents to bulk-create Structured Invoice Case "
+            "Documents, then review only cases listed in requires_agent_review.\n"
+            "3. Perform the final missing-invoice-id scan.\n"
+            "4. Aggregate totals with aggregate_billing_summary(use_case_documents=True) "
+            "and verify the summary.\n"
+            "5. Summarize total invoiced, total valid paid, and outstanding amount from "
+            "aggregate_billing_summary only.\n"
+            "6. Identify late payments, outstanding invoices, and notable anomalies.\n"
+            "7. After verification passes, call build_billing_pdf_sections and use its "
+            "title, filename, and content_sections_json to create the PDF report.\n"
+            "8. The PDF report must contain:\n"
             "   - A summary paragraph of the billing relationship\n"
-            "   - A table of all invoices with their status and amounts\n"
-            "   - Any notable findings (disputes, credits, late payments)"
+            "   - A five-column invoice table: Invoice ID, Amount (EUR), "
+            "Valid Paid (EUR), Outstanding (EUR), Status\n"
+            "   - Concise notable findings (disputes, credits, late payments)\n"
+            "A chart is optional; include one only if it materially improves readability. "
+            "Do not include case labels, timing-status columns, event IDs, "
+            "internal workflow metadata, or unrelated customer profile fields in the PDF."
         ),
     },
     {

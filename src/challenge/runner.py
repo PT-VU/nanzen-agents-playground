@@ -15,6 +15,7 @@ import argparse
 import logging
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
 
 from smolagents import OpenAIServerModel
 
@@ -27,6 +28,8 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 logger = logging.getLogger(__name__)
+
+OUTPUT_DIR = Path(__file__).resolve().parents[2] / "output"
 
 
 def create_model() -> object:
@@ -68,10 +71,35 @@ def run_task(task_def: dict) -> dict:
         name=task_def["agent_name"],
         role=task_def["role"],
         model=model,
+        max_steps=task_def.get("max_steps", 15),
     )
 
     try:
+        expected_report = task_def.get("expected_report")
+        report_path = OUTPUT_DIR / expected_report if expected_report else None
+        report_mtime_before = (
+            report_path.stat().st_mtime if report_path and report_path.exists() else None
+        )
+
         result = agent.run(task_def["prompt"])
+        if report_path:
+            if not report_path.exists() or report_path.stat().st_size == 0:
+                return {
+                    "task": task_def["name"],
+                    "agent": task_def["agent_name"],
+                    "status": "error",
+                    "result": f"Expected report was not produced: {report_path}",
+                }
+            if (
+                report_mtime_before is not None
+                and report_path.stat().st_mtime <= report_mtime_before
+            ):
+                return {
+                    "task": task_def["name"],
+                    "agent": task_def["agent_name"],
+                    "status": "error",
+                    "result": f"Expected report was not refreshed: {report_path}",
+                }
         return {
             "task": task_def["name"],
             "agent": task_def["agent_name"],

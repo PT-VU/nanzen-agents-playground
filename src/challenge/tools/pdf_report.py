@@ -14,7 +14,7 @@ import logging
 from pathlib import Path
 from typing import Any
 
-from smolagents import Tool
+from challenge.tools.base import Tool
 
 OUTPUT_DIR = Path(__file__).resolve().parents[3] / "output"
 
